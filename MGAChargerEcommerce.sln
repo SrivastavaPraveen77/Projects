@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGAChargerEcommerce", "MGAChargerEcommerce\MGAChargerEcommerce.csproj", "{0344056B-45D0-41FA-9328-57EFB52CB0D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGAChargerEcommerce.Tests", "MGAChargerEcommerce.Tests\MGAChargerEcommerce.Tests.csproj", "{3895E4A2-EC19-4CE7-82FE-7617901D185C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGA.ActionLayer", "MGA.ActionLayer\MGA.ActionLayer.csproj", "{3FE9ADF2-F765-4068-A724-7DBB6B7EAB59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGA.Base", "MGA.BASE\MGA.Base.csproj", "{A5CAF857-78C0-4F34-9270-CB4443AB0705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGA.DataLayer", "MGADataLayer\MGA.DataLayer.csproj", "{BB5D8155-5C73-41A7-91F7-CA5FB363BE9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGA.DBServices", "MGA.DBServices\MGA.DBServices.csproj", "{F901D5BA-C3DF-46D0-9848-36DB2E92686B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGA.Utility", "MGA.Utility\MGA.Utility.csproj", "{6F38B575-58F6-4463-A9A6-08D9CBD00485}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0344056B-45D0-41FA-9328-57EFB52CB0D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0344056B-45D0-41FA-9328-57EFB52CB0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0344056B-45D0-41FA-9328-57EFB52CB0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0344056B-45D0-41FA-9328-57EFB52CB0D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3895E4A2-EC19-4CE7-82FE-7617901D185C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3895E4A2-EC19-4CE7-82FE-7617901D185C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3895E4A2-EC19-4CE7-82FE-7617901D185C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3895E4A2-EC19-4CE7-82FE-7617901D185C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FE9ADF2-F765-4068-A724-7DBB6B7EAB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE9ADF2-F765-4068-A724-7DBB6B7EAB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE9ADF2-F765-4068-A724-7DBB6B7EAB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE9ADF2-F765-4068-A724-7DBB6B7EAB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5CAF857-78C0-4F34-9270-CB4443AB0705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CAF857-78C0-4F34-9270-CB4443AB0705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CAF857-78C0-4F34-9270-CB4443AB0705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CAF857-78C0-4F34-9270-CB4443AB0705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5D8155-5C73-41A7-91F7-CA5FB363BE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5D8155-5C73-41A7-91F7-CA5FB363BE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5D8155-5C73-41A7-91F7-CA5FB363BE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5D8155-5C73-41A7-91F7-CA5FB363BE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F901D5BA-C3DF-46D0-9848-36DB2E92686B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F901D5BA-C3DF-46D0-9848-36DB2E92686B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F901D5BA-C3DF-46D0-9848-36DB2E92686B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F901D5BA-C3DF-46D0-9848-36DB2E92686B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F38B575-58F6-4463-A9A6-08D9CBD00485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F38B575-58F6-4463-A9A6-08D9CBD00485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F38B575-58F6-4463-A9A6-08D9CBD00485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F38B575-58F6-4463-A9A6-08D9CBD00485}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
