@@ -1,0 +1,969 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@media only screen and (max-width:1024px) {
+    .shell {
+        width: 86%;
+    }
+
+
+    #footer .top {
+        width: 100%;
+    }
+    /*#footer .cnt {
+    
+    width: 82%;
+    }*/
+    .products ul li {
+        width: 29% !important;
+    }
+
+
+@media only screen and (max-width:960px) {
+    #slider .nav {
+        left: 273px;
+    }
+
+
+
+    #best-sellers .jcarousel-prev {
+        left: -14px;
+    }
+
+    #best-sellers a img {
+        width: 100%;
+    }
+
+    #best-sellers .jcarousel-container {
+        padding: 0px;
+    }
+    /*#footer .top {
+    
+    padding: 0 25px 0 39px;
+    width: 92%;
+    }*/
+    .sliderimg {
+        width: 92%;
+        display: block;
+        margin-top: 20px;
+    }
+
+    #slider .nav {
+        left: 406px;
+    }
+
+    .shell {
+        width: 85%;
+    }
+
+    #slider .details {
+        width: 40%;
+        float: left;
+    }
+
+        #slider .details h2 {
+            font-size: 38px;
+        }
+
+        #slider .details .title {
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+
+        #slider .details .description {
+            font-size: 13px;
+            padding-bottom: 5px;
+        }
+
+    #slider .read-more-btn {
+        width: 32%;
+    }
+
+    #slider .image {
+        width: 38%;
+        float: left;
+    }
+
+    .products ul li {
+        width: 44% !important;
+        margin: 0 12px 14px 0;
+    }
+
+    #sidebar {
+        width: 24%;
+    }
+
+    #content {
+        float: none;
+        display: inline;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    #sidebar .input-group {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    #sidebar {
+        width: 100% !important;
+    }
+
+    #content-slider {
+        width: 100% !important;
+    }
+
+    .sidebar-desktop {
+        display: none !important;
+    }
+
+    .sidebar-small {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1052px) {
+    .main-menu .navbar-nav > li > a {
+        font-size: 12px !important;
+        font-weight: 600;
+        margin-right: 4px !important;
+        padding: 6px 5px !important;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .slide-caption {
+        margin-top: 18px !important;
+        margin-left: 0px !important;
+    }
+}
+
+
+@media only screen and (max-width:992px) {
+
+    .btn-enquiry-main .col-md-7 {
+        padding-right: 15px;
+    }
+
+    .order-main .col-md-6 {
+        width: 100%;
+    }
+
+    .order-main {
+        padding: 30px 36px 30px 36px;
+    }
+
+    .main-menu .container-fluid > .navbar-header {
+        margin-top: -15px;
+    }
+
+    .main-menu .navbar-nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+        .main-menu .navbar-nav > li > a {
+            padding: 6px 8px !important;
+        }
+
+    .navbar-brand > img {
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 23px;
+    }
+}
+
+
+@media only screen and (min-width:720px) and (max-width:992px) {
+    #footer .cnt {
+        width: 96%;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1055px) {
+    #footer .cnt {
+        width: 87%;
+    }
+}
+
+@media only screen and (min-width:770px) and (max-width:1000px) {
+    .products ul li {
+        width: 46%;
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1050px) {
+    .products ul li {
+        width: 29% !important;
+    }
+}
+
+@media only screen and (min-width:1051px) and (max-width:1222px) {
+    .products ul li {
+        width: 29% !important;
+    }
+    .products img {
+   
+    width: 100%;
+    max-width: 100%;
+}
+}
+
+@media only screen and (min-width:769px) and (max-width:860px) {
+    .main-menu .nav > li > a {
+        padding: 9px 13px;
+    }
+    #login-details {
+    width:95%;}
+}
+
+@media only screen and (max-width:767px) {
+    .main-menu .navbar-nav {
+        float: none !important;
+        text-align: center;
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .main-menu .navbar-default .navbar-collapse {
+        background: #F6F6F6 none repeat scroll 0% 0%;
+        position: absolute;
+        right: 0px;
+        left: 0px;
+        z-index: 999;
+    }
+
+    .main-menu .nav > li {
+        position: relative;
+        display: block;
+        border-bottom: 1px solid #E1DDDD;
+    }
+
+        .main-menu .nav > li > a {
+            padding-bottom: 6px;
+            margin-right: 0px !important;
+        }
+}
+@media only screen and (min-width:769px) and (max-width:992px) {
+    .ul-block ul {
+        width: 38% !important;
+    }
+}
+@media only screen and (min-width:1000px) and (max-width:1200px) {
+    .ul-block ul {
+        width: 24% !important;
+    }
+}
+@media only screen and (max-width:768px) {
+    #login-details ul {
+        text-align: center;
+        float: none;
+    }
+
+    #login-details p {
+        float: none;
+    }
+
+    .navbar-toggle {
+        margin-top: 33px !important;
+    }
+
+    .owl-item {
+        margin-right: -2px;
+    }
+
+   
+
+    .left-head {
+        text-align: center;
+    }
+
+        .left-head ul li a {
+            border-right: none;
+            line-height: 28px;
+        }
+
+        .left-head ul li {
+            display: inline;
+        }
+
+    .main-menu .navbar-default .navbar-collapse {
+        margin-top: 0px;
+    }
+
+    .signup-menu {
+        float: none;
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        left: 0px;
+        padding-top: 20px;
+        margin: 0px auto;
+    }
+
+    .allpageheading {
+        font-size: 19px;
+    }
+
+    .signup-menu ul li a {
+        padding: 3px 1px !important;
+    }
+
+    #content2 {
+        float: left;
+        display: inline;
+        width: 100%;
+    }
+
+        .shell {
+        width: 66%;
+    }
+
+    #content {
+        width: 100% !important;
+    
+        float: left;
+       
+    }
+
+    .news-board {
+        width: 98%;
+    }
+
+    #logo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+    .ul-block ul {
+        width: 38%;
+    }
+    .main-menu .container-fluid > .navbar-header {
+        margin-top: 0px !important;
+    }
+
+    .shell {
+        width: 76%;
+    }
+
+    #slider .nav {
+        left: 273px;
+    }
+
+    
+
+    #sidebar {
+        width: 100%;
+    }
+
+    .products img {
+        width: 100%;
+    }
+
+    .products ul li {
+        width: 43% !important;
+    }
+
+    .product .buy-btn {
+        width: 90%;
+    }
+
+    #best-sellers .jcarousel-next {
+        right: 0px !important;
+    }
+
+    #best-sellers .jcarousel-prev {
+        left: -37px !important;
+    }
+
+    #best-sellers .jcarousel-container {
+        padding: 0 26px 0 0px !important;
+    }
+
+
+    #footer .top {
+        width: 100%;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .store {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    #newsletter {
+        width: 100%;
+    }
+
+    .sliderimg {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+
+    #slider .details {
+        width: 32%;
+        float: left;
+    }
+
+        #slider .details h2 {
+            font-size: 34px;
+        }
+
+        #slider .details .title {
+            font-size: 14px;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+
+        #slider .details .description {
+            font-size: 12px;
+            padding-bottom: 5px;
+        }
+
+        #slider .details h3 {
+            font-size: 19px;
+            line-height: 5px;
+        }
+
+    #slider .read-more-btn {
+        width: 52%;
+    }
+
+    #slider .image {
+        width: 30%;
+        float: left;
+    }
+
+    #slider .details {
+        width: 25%;
+        float: left;
+        padding: 0px 10px;
+    }
+
+    #login-details {
+        margin-bottom: 12px !important;
+    }
+
+    .signup-menu {
+        float: none;
+        margin-top: 0px;
+        position: absolute;
+        right: 0px;
+        width: 93%;
+        left: 0;
+        margin: 0px auto;
+    }
+
+    #login-details li {
+        margin-bottom: 9px;
+    }
+
+    .navbar-toggle {
+        margin-top: 50px !important;
+    }
+}
+
+@media only screen and (max-width:725px) {
+    /*#login-details {
+        position: absolute;
+        right: 14%;
+        top: 12px;
+    }*/
+}
+
+@media only screen and (min-width:770px) and (max-width:860px) {
+    #login-details {
+        position: relative !important;
+        right: 0px !important;
+        top: 2px !important;
+        font-size: 12px !important;
+        line-height: 16px !important;
+        color: #707070;
+        z-index: 99;
+        width: 92% !important;
+        float: right !important;
+        margin-bottom: 13px;
+    }
+
+        #login-details li {
+            margin-bottom: 7px;
+        }
+}
+
+@media only screen and (max-width:600px) {
+    .main-menu .navbar-default {
+        margin-top: 70px;
+    }
+
+    .navbar-toggle {
+        margin-top: 33px !important;
+    }
+}
+
+@media only screen and (max-width:480px) {
+
+    /*#footer .cnt {
+    
+    padding: 23px 10px 0 15px;
+}*/
+    #best-sellers .jcarousel-container {
+        width: 240px;
+    }
+
+    #best-seller .jcarousel-list {
+        left: 0px;
+    }
+
+    #best-sellers .jcarousel-next {
+        right: -55px !important;
+    }
+
+    #best-sellers .jcarousel-item {
+        margin: 10px;
+    }
+
+    #logo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .shell {
+        width: 66%;
+        padding: 0px 44px;
+    }
+
+    /*#login-details {
+        float: none;
+        right: 0px;
+        left: 0px;
+        width: 90%;
+        margin: 0px auto;
+    }*/
+
+    #content {
+        width: 100% !important;
+    }
+
+    #sidebar {
+        width: 100%;
+    }
+
+    .products ul li {
+        width: 100% !important;
+    }
+
+    .product .buy-btn {
+        width: 91%;
+    }
+
+    #footer {
+        width: 90%;
+    }
+
+        #footer .top {
+            width: 100%;
+            padding: 0px;
+        }
+
+    #best-sellers .jcarousel-clip {
+        width: 100%;
+    }
+
+    #best-sellers .price {
+        right: -14px;
+    }
+
+    #best-sellers .jcarousel-next {
+        right: -28px !important;
+    }
+
+    #best-sellers .jcarousel-item {
+        margin-right: 0px;
+    }
+
+    #slider .jcarousel-container {
+        width: 100%;
+        padding: 37px 0px 20px 0px;
+    }
+
+    #slider .nav {
+        left: 116px;
+    }
+
+    .sliderimg {
+        width: 42%;
+        margin-top: 0px !important;
+    }
+
+    #slider .image {
+        width: 50%;
+    }
+
+    #slider .details {
+        float: left;
+        width: 100%;
+    }
+
+    .details h2 {
+        font-size: 20px !important;
+        line-height: normal;
+        padding: 0px 20px;
+    }
+
+    #slider .details h3 {
+        font-size: 16px !important;
+        padding: 15px 20px;
+    }
+
+    #slider .jcarousel-item {
+        height: 465px;
+    }
+
+    #slider .read-more-btn {
+        width: 13%;
+    }
+
+    #slider .jcarousel-clip {
+        height: 466px;
+        overflow: hidden;
+    }
+
+    #slider .jcarousel-container {
+        height: 450px;
+    }
+
+    #slider .details .title {
+        word-break: break-all;
+        max-width: 181px;
+        font-size: 12px !important;
+    }
+
+    #slider .details .description {
+        word-break: break-all;
+        max-width: 159px;
+        font-size: 12px !important;
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (min-width:482px) and (max-width:688px) {
+    .product .buy-btn {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #bound-detail-carousel {
+        overflow: hidden;
+    }
+
+    .owl-item {
+        margin-right: -2px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    #login-details ul {
+        text-align: center;
+        float: none;
+    }
+
+    #login-details p {
+        float: none;
+    }
+
+    .navbar-toggle {
+        margin-top: 33px !important;
+    }
+
+    .owl-item {
+        margin-right: -2px;
+    }
+
+    #logo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .left-head {
+        text-align: center;
+    }
+
+        .left-head ul li a {
+            border-right: none;
+            line-height: 28px;
+        }
+
+        .left-head ul li {
+            display: block;
+        }
+
+    .main-menu .navbar-default .navbar-collapse {
+        margin-top: 0px;
+    }
+
+    .signup-menu {
+        float: none;
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        left: 0px;
+        padding-top: 20px;
+        margin: 0px auto;
+    }
+
+    .allpageheading {
+        font-size: 19px;
+    }
+
+    .signup-menu ul li a {
+        padding: 3px 1px !important;
+    }
+
+    #content2 {
+        float: left;
+        display: inline;
+        width: 100%;
+    }
+
+    .news-board {
+        width: 100%;
+    }
+
+    .shell {
+        width: 66%;
+    }
+
+    #content {
+        width: 100% !important;
+    }
+
+    #sidebar {
+        width: 100%;
+    }
+
+    .products ul li {
+        width: 100% !important;
+    }
+
+    .slide-caption h4, p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #footer {
+        width: 100% !important;
+    }
+
+    .slider-main .owl-controls {
+        top: 42% !important;
+    }
+
+    .modal-dialog {
+        margin-left: 5% !important;
+    }
+
+    .modal-content {
+        width: 85% !important;
+    }
+
+    .reg-form {
+        padding: 15px 7px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .ul-block ul {
+        width: 100%;
+        float: left !important;
+        padding-left: 10px;
+    }
+
+    .order-main {
+        padding: 25px 0px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    #logo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .left-head {
+        text-align: center;
+    }
+
+        .left-head ul li a {
+            border-right: none;
+            line-height: 28px;
+        }
+
+        .left-head ul li {
+            display: block;
+        }
+
+    .main-menu .navbar-default .navbar-collapse {
+        margin-top: 0px;
+    }
+
+    .signup-menu {
+        float: none;
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        left: 0px;
+        padding-top: 20px;
+        margin: 0px auto;
+    }
+
+    .allpageheading {
+        font-size: 19px;
+    }
+
+    .signup-menu ul li a {
+        padding: 3px 1px !important;
+    }
+
+    #content2 {
+        float: left;
+        display: inline;
+        width: 100%;
+    }
+
+    .news-board {
+        width: 100%;
+    }
+
+    .shell {
+        width: 66%;
+    }
+
+    #content {
+        width: 100% !important;
+    }
+
+    #sidebar {
+        width: 100%;
+    }
+
+    .products ul li {
+        width: 100% !important;
+    }
+
+    .slide-caption h4, p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #footer {
+        width: 100% !important;
+    }
+
+    .slider-main .owl-controls {
+        top: 42% !important;
+    }
+
+    .modal-dialog {
+        margin-left: 5% !important;
+    }
+
+    .modal-content {
+        width: 85% !important;
+    }
+
+    .reg-form {
+        padding: 15px 7px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .ul-block ul {
+        width: 100%;
+        float: left !important;
+        padding-left: 10px;
+    }
+
+    .order-main {
+        padding: 25px 0px;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width:350px) {
+    .bdetail-image, .bound-image {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width:960px) {
+
+    #quantity {
+        margin-bottom: 10px;
+    }
+
+    .bdetail-btn .btn {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+.b-info-main {
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+.bdetail-image {
+    position: static;
+    float: none;
+}
+
+.days {
+    text-align: right;
+    width: 100%;
+}
+
+
+.bound-image {
+    margin-left: 0px;
+    margin-top: 10px;
+    position: relative;
+    float: none;
+}
+
+.bound-info-all {
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+#bound-detail-carousel .owl-prev {
+    left: -5px;
+    position: absolute;
+}
+
+#bound-detail-carousel .owl-next {
+    right: 0px;
+    position: absolute;
+}
+}
+.tilled {
+    padding:6px;
+    font-size:18px;
+    font-family:lobster,cursive;
+}

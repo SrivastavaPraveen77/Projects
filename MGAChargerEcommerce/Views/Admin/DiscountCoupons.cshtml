@@ -1,0 +1,122 @@
+﻿@model IEnumerable<MGAChargerEcommerce.Models.CustomerCoupon>
+
+@{
+    ViewBag.Title = "DiscountCoupons";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    p a {
+        text-align: center;
+        color: white;
+    }
+    p a:hover {
+        text-align: center;
+        color: white;
+        font-weight:bold;
+    }
+</style>
+
+<div class="row">
+
+
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">
+                Discount Coupons
+            </div>
+            <p  class="btn btn-sm btn-primary resbtn" >
+                @Html.ActionLink("New Coupon", "DiscountCoupon")
+            </p>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CouponCode)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CustomerName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ExpiredOn)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DiscountType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Discount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MinPurchaseAmount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Remarks)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.isUsed)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UsedOn)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UsedBy)
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.IsDeactive)
+                        </th>*@
+
+
+                    </tr>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CouponCode)
+                                </td>
+
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CustomerName)
+                                </td>
+                                <td>
+                                    @Convert.ToString(string.Format("{0:dd/MM/yyyy}", item.ExpiredOn))
+                                 </td>
+                                <td>
+                                    @*Html.DisplayFor(modelItem => item.DiscountType=="p"? "per" : "Amt" )*@
+                                    @*@{item.DiscountType.ToLower() == "p"? "per":"Amt" ;}*@
+                                    @Convert.ToString(item.DiscountType.ToLower() == "p" ? "per" : "Amt")
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Discount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MinPurchaseAmount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Remarks)
+                                </td>
+                                <td>
+                                    @{ var s = (item.isUsed == true ? "Yes" : "No");
+                                    }
+                                    @s
+                                </td>
+                                <td>
+                                    @Convert.ToString(string.Format("{0:dd/MM/yyyy}", item.UsedOn))
+                                  </td>
+                                  <td>
+                                      @Html.DisplayFor(modelItem => item.UsedBy)
+                                  </td>
+                                @*<td>
+        @Html.DisplayFor(modelItem => item.IsDeactive)
+    </td>*@
+
+</tr>
+                        }
+                    }
+
+                </table>
+            </div>
+            </div>
+        </div>
+</div>

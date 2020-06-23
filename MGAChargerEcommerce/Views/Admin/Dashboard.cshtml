@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Dashboard</h2><div class="row">
+    <div id="monthlyChartDiv" style="width: 100%; height: 500px;"></div>
+</div>
+<div class="row">
+    <div id="yearlyChartDiv" style="width: 100%; height: 500px;"></div>
+</div>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6v5-2uaq_wusHDktM9ILcqIrlPtnZgEk&sensor=false"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawMonthlyChart);
+    google.setOnLoadCallback(drawYearlyChart);
+    $(document).ready(function () {
+        //$.get("/Admin/Admindashboard", {}, function (data) {
+        //    var dataValues = JSON.parse(data);
+        //    drawMonthlyChart(dataValues);
+        //    drawYearlyChart(dataValues);
+        //});
+    });
+
+
+    function drawMonthlyChart(dataValues) {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Month');
+        data.addColumn('number', 'Sale');
+        for (var i = 0; i <= dataValues.monthlySale.length - 1; i++) {
+            data.addRow([dataValues.monthlySale[i].Months, parseInt(dataValues.monthlySale[i].Sale)]);
+        }
+        var options = {
+            title: 'Monthly Sale in Current Year',
+            titleTextStyle: { color: 'black', fontSize: 16, fontName: "arial", bold: false },
+            vAxis: { title: 'Sale', titleTextStyle: { color: 'black', fontSize: 15, fontName: "arial" }, textStyle: { color: 'black', fontName: "arial" } },
+            hAxis: { title: 'Month', titleTextStyle: { color: 'black', fontSize: 15, fontName: "arial" }, textStyle: { color: 'black', fontName: "arial" } },
+            seriesType: 'bars',
+            series: { 0: { type: 'bars', color: '#1fbaef' } }
+        };
+        var chart = new google.visualization.ComboChart(document.getElementById('monthlyChartDiv'));
+        chart.draw(data, options);
+    }
+
+    function drawYearlyChart(dataValues) {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Year');
+        data.addColumn('number', 'Sale');
+        for (var i = 0; i <= dataValues.yearlySale.length - 1; i++) {
+            data.addRow([dataValues.yearlySale[i].Years, parseInt(dataValues.yearlySale[i].Sale)]);
+        }
+        var options = {
+            title: 'Yearly Sale',
+            titleTextStyle: { color: 'black', fontSize: 16, fontName: "arial", bold: true },
+            vAxis: { title: 'Sale', titleTextStyle: { color: 'black', fontSize: 15, fontName: "arial" }, textStyle: { color: 'black', fontName: "arial" } },
+            hAxis: { title: 'Year', titleTextStyle: { color: 'black', fontSize: 15, fontName: "arial" }, textStyle: { color: 'black', fontName: "arial" } },
+            seriesType: 'bars',
+            series: { 0: { type: 'bars', color: '#1fbaef' } }
+        };
+        var chart = new google.visualization.ComboChart(document.getElementById('yearlyChartDiv'));
+        chart.draw(data, options);
+    }
+</script>
+

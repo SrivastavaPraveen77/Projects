@@ -1,0 +1,56 @@
+﻿@model MGAChargerEcommerce.Models.MasterPagesModel
+@{
+    ViewBag.Title = "ManageWhatClientSay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">Manage Latest Work</div>
+            <div class="panel-body">
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success" id="message" role="alert">@TempData["SuccessMessage"].ToString()</div>
+                }
+                else if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">@TempData["ErrorMessage"].ToString()</div>
+                }
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+
+                    <div class="editor-label">
+                        @Html.HiddenFor(model => model.PageId)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.HtmlContent)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.HtmlContent)
+                        @Html.ValidationMessageFor(model => model.HtmlContent)
+                    </div>
+
+                    <p>
+                        <input type="submit" value="Submit" class="btn btn-sm btn-primary btn-margin" />
+                    </p>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+<script src="~/Scripts/ckeditor/adapters/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        $("#HtmlContent").ckeditor();
+    });
+</script>
+

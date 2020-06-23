@@ -1,0 +1,579 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head runat="server">
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="~/Content/webHome/images/favicon.png" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/bootstrap.min.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/nivo-slider.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/core.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/shortcodes.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/style.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/responsive.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/custom.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/style-customizer.css")" />
+
+	<link href="#" data-style="styles" rel="stylesheet" />
+
+	<script src="@Url.Content("~/Scripts/webHome/modernizr-2.8.3.min.js")"></script>
+
+	<style type="text/css">
+		.menu_bgrd {
+			background-color: #222222eb;
+			/*background-image: url(/Content/webHome/images/menu_background.jpg);*/
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body class="wide-layout">
+
+	<!-- Body main wrapper start -->
+	<div class="wrapper">
+
+		<!-- START HEADER AREA -->
+		<header class="header-area header-wrapper">
+			<!-- header-top-bar -->
+			<div class="header-top-bar plr-185">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-6 hidden-xs">
+							<div class="call-us">
+								<p class="mb-0 roboto">Our Services : 0522-4062503/ <span class="glyphicon glyphicon-plus"></span> 91 7607001609</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<div class="top-link clearfix">
+								@{
+									MGA.Base.ActionResult actionResult = new MGA.Base.ActionResult();
+									MGA.ActionLayer.Admin.AdminAL adminAction = new MGA.ActionLayer.Admin.AdminAL();
+								}
+								@if (Session["userName"] != null)
+								{
+									<ul class="link f-right">
+										<li>
+											@(Session["userName"] != null ? Html.Raw("<a href='/Account/Profile/' id='user'><i class='zmdi zmdi-account'></i>Welcome, " + Session["userName"].ToString() + "</a>") : Html.Raw(""))
+
+										</li>
+										@*<li>
+												<a href="my-account.html">
+													<i class="zmdi zmdi-view-dashboard"></i>
+													Payment History
+												</a>
+											</li>*@
+										<li>
+											<a href="/Home/Logout">
+												<i class="zmdi zmdi-lock"></i>
+												Logout
+											</a>
+										</li>
+									</ul>
+								}
+								else
+								{
+									<ul class="link f-right">
+										@*<li>
+												<a href="my-account.html">
+													<i class="zmdi zmdi-account-box"></i>
+													My Account
+												</a>
+											</li>*@
+										<li>
+											<a href="/Home/LoginRegister">
+												<i class="zmdi zmdi-sign-in"></i>
+												Login
+											</a>
+										</li>
+                                        <li>
+                                            <a href="/Home/ForgetPassword">
+                                                <i class="zmdi zmdi-sign-in"></i>
+                                                Change Password
+                                            </a>
+                                        </li>
+									</ul>
+								}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header-middle-area -->
+			<div id="sticky-header" class="header-middle-area plr-185 menu_bgrd">
+				<div class="container-fluid" >
+					<div class="full-width-mega-dropdown">
+						<div class="row">
+							<!-- logo -->
+							<div class="col-md-2 col-sm-6 col-xs-12">
+								<div class="logo">
+                                    <a href="/Home/Index">
+                                        @*<img src="~/Content/webHome/images/logo.jpg" alt="main logo">*@
+                                        <img src="/Content/webHome/images/logo.png" alt="" style="width:97px;Height:61px;">
+                                        @*<h1 style="font-size: 26px; color:white;">MGA CHARGER</h1>*@
+                                    </a>
+								</div>
+							</div>
+							<!-- primary-menu -->
+							<div class="col-md-8 hidden-sm hidden-xs">
+								<nav id="primary-menu">
+									<ul class="main-menu text-center">
+										<li>
+											<a href="/Home/Index" style="font-size:15px; color:white;">Home</a>
+										</li>
+										<li>
+											<a href="/Home/About" style="font-size:15px; color:white;">About us</a>
+										</li>
+										<li class="mega-parent">
+											<a href="" style="font-size:15px; color:white;">Products</a>
+											<div class="mega-menu-area clearfix">
+												<div class="mega-menu-link f-left">
+
+
+													@{
+														MGA.Base.ActionResult actionResult1 = new MGA.Base.ActionResult();
+														MGA.ActionLayer.Home.HomeAL homeAction = new MGA.ActionLayer.Home.HomeAL();
+
+														MGA.BASE.Home.ProductBase baseModel_p1 = new MGA.BASE.Home.ProductBase();
+														baseModel_p1.ActionId = 8;
+														baseModel_p1.ProductCategory = 1;
+														homeAction = new MGA.ActionLayer.Home.HomeAL();
+														actionResult1 = homeAction.get_Products(baseModel_p1);
+
+														if (actionResult1.dtResult.Rows.Count > 0)
+														{
+															<ul class="single-mega-item">
+																<li class="menu-title"><b>Industrial Battery Charger</b></li>
+																@for (int i = 0; i < actionResult1.dtResult.Rows.Count; i++)
+																{
+																	<li>
+																		<a href="/Shop/Details/@actionResult1.dtResult.Rows[i]["ProductId"].ToString()">@actionResult1.dtResult.Rows[i]["ProductName"].ToString()</a>
+																	</li>
+																}
+															</ul>
+														}
+													}
+
+
+
+													@{
+														MGA.BASE.Home.ProductBase baseModel_p2 = new MGA.BASE.Home.ProductBase();
+														baseModel_p2.ActionId = 8;
+														baseModel_p2.ProductCategory = 2;
+														homeAction = new MGA.ActionLayer.Home.HomeAL();
+														actionResult1 = homeAction.get_Products(baseModel_p2);
+
+
+														if (actionResult1.dtResult.Rows.Count > 0)
+														{
+															<ul class="single-mega-item">
+																<li class="menu-title"><b>Home Used Battery Charger</b></li>
+																@for (int i = 0; i < actionResult1.dtResult.Rows.Count; i++)
+																{
+																	<li>
+																		<a href="/Shop/Details/@actionResult1.dtResult.Rows[i]["ProductId"].ToString()">@actionResult1.dtResult.Rows[i]["ProductName"].ToString()</a>
+																	</li>
+																}
+															</ul>
+														}
+													}
+
+													@{
+														MGA.BASE.Home.ProductBase baseModel_p3 = new MGA.BASE.Home.ProductBase();
+														baseModel_p3.ActionId = 8;
+														baseModel_p3.ProductCategory = 3;
+														homeAction = new MGA.ActionLayer.Home.HomeAL();
+														actionResult1 = homeAction.get_Products(baseModel_p3);
+
+														if (actionResult1.dtResult.Rows.Count > 0)
+														{
+															<ul class="single-mega-item">
+																<li class="menu-title"><b>Solar Unit</b></li>
+																@for (int i = 0; i < actionResult1.dtResult.Rows.Count; i++)
+																{
+																	<li>
+																		<a href="/Shop/Details/@actionResult1.dtResult.Rows[i]["ProductId"].ToString()">@actionResult1.dtResult.Rows[i]["ProductName"].ToString()</a>
+																	</li>
+																}
+															</ul>
+														}
+													}
+
+												</div>
+												<div class="mega-menu-photo f-left">
+													<a href="#">
+														<img src="~/Content/webHome/images/mega_menu_product.jpg" alt="mega menu image" />
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<a href="/Shop/Index/1" style="font-size:15px; color:white;">Shop</a>
+										</li>
+										<li>
+											<a href="/Home/MediaRoom" style="font-size:15px; color:white;">Media Room</a>
+										</li>
+										<li>
+											<a href="/Home/Contact" style="font-size:15px; color:white;">Contact</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<!-- header-search & total-cart -->
+							<div class="col-md-2 col-sm-6 col-xs-12">
+								<div class="search-top-cart  f-right">
+									<!-- total-cart -->
+									<div class="total-cart f-left">
+										<div class="total-cart-in">
+											@{
+												MGAChargerEcommerce.Models.TempCartFunctions tempCartFunctions = new MGAChargerEcommerce.Models.TempCartFunctions();
+
+												<div class="cart-toggler">
+													<a href="/Shop/">
+														<span class="cart-quantity" style="color:white;">Cart (@tempCartFunctions.CountCart())</span><br>
+														@*<span class="cart-quantity">@{Html.RenderAction("CartSummary", "Shop");}</span><br>*@
+														<span class="cart-icon">
+															<i class="zmdi zmdi-shopping-cart-plus"></i>
+														</span>
+													</a>
+												</div>
+												<ul>
+													<li>
+														<div class="top-cart-inner your-cart">
+															<h5 class="text-capitalize">Your Cart</h5>
+														</div>
+													</li>
+													@if (tempCartFunctions.CountCart() > 0)
+													{
+														if (tempCartFunctions != null)
+														{
+															foreach (var item in tempCartFunctions.GetCartProducts())
+															{
+																<li>
+																	<div class="total-cart-pro">
+																		<!-- single-cart -->
+																		<div class="single-cart clearfix">
+																			<table width="100%">
+																				<tr>
+																					<td>
+																						<div class="cart-img f-left">
+																							<a href="/Shop/Details/@item.ProductId">
+																								<img width="100" alt="Cart Product" src="@(!String.IsNullOrEmpty(@item.ProductImage) ? "/Content/ProductImage/"+@item.ProductImage : "/Content/webHome/images/noimage.png")" />
+																							</a>
+																						</div>
+																					</td>
+																					<td style="vertical-align:top">
+																						<div class="cart-info f-left">
+																							<h6 class="text-capitalize">
+																								<a href="/Shop/Details/@item.ProductId">@item.ProductName</a>
+																							</h6>
+																						</div>
+																					</td>
+																				</tr>
+																			</table>
+																		</div>
+																		<!-- single-cart -->
+																	</div>
+																</li>
+															}
+														}
+													}
+
+													<li>
+														<div class="top-cart-inner subtotal">
+															<h4 class="text-uppercase g-font-2">
+																Total  = <span>₹ @tempCartFunctions.GetTotal()</span>
+															</h4>
+														</div>
+													</li>
+													<li>
+														<div class="top-cart-inner view-cart">
+															<h4 class="text-uppercase">
+																<a href="/Shop/Cart">View cart</a>
+															</h4>
+														</div>
+													</li>
+													@if (tempCartFunctions.CountCart() > 0)
+													{
+														<li>
+															<div class="top-cart-inner check-out">
+																<h4 class="text-uppercase">
+																	<a href="/Shop/CheckOut">Check out</a>
+																</h4>
+															</div>
+														</li>
+													}
+												</ul>
+											}
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER AREA -->
+		<!-- START MOBILE MENU AREA -->
+		<div class="mobile-menu-area hidden-lg hidden-md">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="mobile-menu">
+							<nav id="dropdown">
+
+								<ul>
+									<li>
+										<a href="/Home/Index" style="font-size:15px">Home</a>
+									</li>
+									<li>
+										<a href="/Home/About" style="font-size:15px">About us</a>
+									</li>
+									<li>
+										<a href="" style="font-size:15px">Products</a>
+										<ul>
+											<li>
+												<a href="/Shop/Details/1">ECO-1 Multi Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/2">ECO-6 Mini Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/3">ECO-9 Mini Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/4">ECO-9 MCB Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/5">ECO-15 MCB Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/6">BIG BOSS TITANIUM BATTERY CHARGER</a>
+											</li>
+
+											<li>
+												<a href="/Shop/Details/7">ACTIVE 6/12 Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/8">ACTIVE-12 Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/9">ACTIVE-24 Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/10">ACTIVE-48 Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/11">SMF-1 Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/12">SMF-6 Battery Charger</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/13">Solar Charge Controller 96 Volt & 45 Amp</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/14">Solar Charge Controller 12 Volt & 24 Volt 45 Amp</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/15">Solar Charge Controller 48 Volt 60 Amp</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/16">Solar Charge Controller 48 Volt 45 Amp</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/17">Solar Charge Controller 48 Volt & 30 Amp</a>
+											</li>
+											<li>
+												<a href="/Shop/Details/18">Solar Charge Controller 36 Volt & 30 Amp</a>
+											</li>
+										</ul>
+
+									</li>
+									<li>
+										<a href="/Shop/Index/1" style="font-size:15px">Shop</a>
+									</li>
+									<li>
+										<a href="/Home/MediaRoom" style="font-size:15px">Media Room</a>
+									</li>
+									<li>
+										<a href="/Home/Contact" style="font-size:15px">Contact</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- START MOBILE MENU AREA -->
+		<!-- END MOBILE MENU AREA -->
+		<!-- END MOBILE MENU AREA -->
+		@RenderBody()
+		<!-- START FOOTER AREA -->
+		<footer id="footer" class="footer-area">
+			<div class="footer-top">
+				<div class="container-fluid">
+					<div class="">
+						<div class="footer-top-inner gray-bg" style="background: #000080;">
+							<div class="row">
+
+								<div class="col-lg-6 col-md-5 col-sm-4">
+									<div class="single-footer footer-about">
+										<div class="footer-logo">
+											<img src="~/Content/webHome/images/logo.png" alt="" style="width:200px;">
+										</div>
+										<div class="footer-brief">
+											<p style="color:white;">We manufactures best technology, modern Battery chargers which applicable on charge all Automotive batteries, SMPS Batteries, VRLA Batteries, TUBULAR Batteries, Inverter Batteries etc with automatic cutoff and inbuilt Turbo charge features.</p>
+											<p style="color:white;">Our motto has always been Customer Delight through Innovation & Passion with the focus on Execution & Team-work. At MGA, we passionately innovate to make life comfortable and efficient.</p>
+										</div>
+										<ul class="footer-social">
+											<li>
+												<a class="facebook" href="" title="Facebook"><i class="zmdi zmdi-facebook"></i></a>
+											</li>
+											<li>
+												<a class="google-plus" href="" title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a>
+											</li>
+											<li>
+												<a class="twitter" href="" title="Twitter"><i class="zmdi zmdi-twitter"></i></a>
+											</li>
+											<li>
+												<a class="rss" href="" title="RSS"><i class="zmdi zmdi-rss"></i></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-4">
+									<div class="single-footer">
+										<h4 class="footer-title border-left" style="color:white;">my account</h4>
+										<ul class="footer-menu">
+											<li>
+												<a href="#" style="color:white;"><i class="zmdi zmdi-circle"></i><span>My Account</span></a>
+											</li>
+											<li>
+												<a href="/Shop/Cart" style="color:white;"><i class="zmdi zmdi-circle"></i><span>My Cart</span></a>
+											</li>
+											<li>
+												<a href="/Home/LoginRegister" style="color:white;"><i class="zmdi zmdi-circle"></i><span>Sign In</span></a>
+											</li>
+											<li>
+												<a href="/Home/LoginRegister" style="color:white;"><i class="zmdi zmdi-circle"></i><span>Registration</span></a>
+											</li>
+											<li>
+												<a href="/Shop/Checkout" style="color:white;"><i class="zmdi zmdi-circle"></i><span>Check out</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								@*<div class="col-lg-4 col-md-4 col-sm-4">
+									<div class="single-footer">
+										<h4 class="footer-title border-left" style="color:white;">Get in touch</h4>
+										<div class="footer-message">
+											 
+											<div class="form-group">
+												@if (TempData["SuccessMessage"] != null)
+												{
+													<div class="alert alert-success" style="margin: 10px 0">
+														@TempData["SuccessMessage"]
+													</div>
+												}
+												@if (TempData["ErrorMessage"] != null)
+												{
+													<div class="alert alert-danger" style="margin: 10px 0">
+														@TempData["ErrorMessage"]
+													</div>
+												}
+											</div>
+											
+											@using (Html.BeginForm("FMailFormSubmit", "Home"))
+											{
+												@Html.AntiForgeryToken()
+												@Html.ValidationSummary(true)
+												{
+													<div >
+														@Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Your name here..." })
+														@Html.ValidationMessageFor(m => m.Name, null, new { @class = "Validat_style" })
+													</div>
+													<div >
+														@Html.TextBoxFor(m => m.From, new { @class = "form-control", @placeholder = "Your email here..." })
+														@Html.ValidationMessageFor(m => m.From, null, new { })
+													</div>
+													<div >
+														@Html.TextBoxFor(m => m.Body, new { @class = "form-control", @placeholder = "Your messege here..." })
+														@Html.ValidationMessageFor(m => m.Body, null, new { @class = "height-80" })
+
+														<button class="submit-btn-1 mt-20 btn-hover-1" type="submit">submit message</button>
+													</div>
+												}
+											}
+										</div>
+									</div>
+								</div>*@
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom black-bg">
+				<div class="container-fluid">
+					<div class="plr-185">
+						<div class="copyright">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<div class="copyright-text">
+										<p>&copy; <a href="#" target="_blank">MGA Charger</a> 2019. All Rights Reserved.</p>
+									</div>
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<ul class="footer-payment text-right">
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_1.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_2.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_3.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_4.jpg" alt="" /></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END FOOTER AREA -->
+		<!-- Body main wrapper end -->
+		<!-- Placed JS at the end of the document so the pages load faster -->
+		<!-- jquery latest version -->
+	</div>
+	<script type="text/javascript" src="@Url.Content("~/Content/js/jquery-1.11.3.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/jquery-3.1.1.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/bootstrap.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/jquery.nivo.slider.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/plugins.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/main.js")"></script>
+
+
+
+	@*<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;"><i class="zmdi zmdi-chevron-up"></i></a>*@
+</body>
+</html>
+ 

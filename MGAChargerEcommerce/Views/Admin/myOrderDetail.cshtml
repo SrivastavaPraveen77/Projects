@@ -1,0 +1,72 @@
+﻿@model MGAChargerEcommerce.Models.MyOrderDetailModel
+@{
+    ViewBag.Title = "myOrderDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            
+            @if (Model.myOrderDetailList.Count > 0 && Model.myOrderDetailList != null)
+            {
+                <div class="panel-heading">
+                Order List
+            </div>
+                int SrNo = 0;
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+							<tr>
+								<th>S/No.</th>
+								<th>Order#.</th>
+
+								<th>TxID#</th>
+								<th>Date</th>
+								<th>User EMail</th>
+								<th>ShipTo</th>
+								<th>OrderTotal</th>
+								<th>OrderStatus</th>
+								<th>Action</th>
+								
+							</tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.myOrderDetailList)
+                            {
+                                SrNo++;
+                                <tr id="row_@item.OrderId">
+                                    <td>@SrNo</td>
+                                    <td>@item.OrderNumber</td>
+                                    <td>@item.Txid</td>
+                                    <td>@item.OrderDate</td>
+                                    <td>@item.UserEmail</td>
+                                    <td>@item.ShipingTo</td>
+                                    <td>@item.GrandTotalAmount</td>
+                                    <td>@item.status</td>
+
+                                    <td>
+                                        @*<a href="/Admin/viewOrderDetail/@item.OrderId" style="cursor:pointer"><i class="fa fa-pencil-square-o"></i></a>*@
+                                        <a href="/Admin/PckingDetail/@item.OrderId" style="cursor:pointer"><i class="fa fa-file-pdf-o"></i></a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            { 
+                <div class="panel-heading">
+                    No Records Found
+            </div>
+              
+            }
+            
+        </div>
+    </div>
+</div>

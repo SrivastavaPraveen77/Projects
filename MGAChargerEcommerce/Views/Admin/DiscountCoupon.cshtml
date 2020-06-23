@@ -1,0 +1,191 @@
+﻿@model MGAChargerEcommerce.Models.CustomerCoupon
+
+@{
+    ViewBag.Title = "CustomerCoupon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">Discount Coupon</div>
+            <div class="panel-body">
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success" id="message" role="alert">@TempData["Success"].ToString()</div>
+                }
+                else if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">@TempData["Error"].ToString()</div>
+                }
+                @using (Html.BeginForm("DiscountCoupon", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", Id = "form1" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+
+                    <div class="editor-label">
+                        @Html.HiddenFor(model => model.CustomerCouponID)
+                    </div>
+                    <div class="col-md-12">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.CustomerId)
+                        </div>
+                        <div class="editor-field ">
+                            @Html.TextBoxFor(model => model.CustomerName, "", new { style = "width:100%; height:40px;", placeholder = "Customer Name" })
+                            @Html.ValidationMessageFor(model => model.CustomerName)
+                            @Html.HiddenFor(model => model.CustomerId)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.ExpiredOn)
+                        </div>
+                        <div class="editor-field">
+                            @*type="date" ,*@
+                            @Html.TextBoxFor(model => model.ExpiredOn, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.ExpiredOn) })
+                            @Html.ValidationMessageFor(model => model.ExpiredOn)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.CouponCode)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.CouponCode, new { @readonly = "readonly", style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.CouponCode) })
+
+                            @*@Html.DropDownListFor(model => model.Addproduct.ProductCategory, ViewBag.ProductCategoryList as List<SelectListItem>, "-Select Product Category-", new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(model => model.CouponCode)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.DiscountType)
+                        </div>
+                        <div class="editor-field">
+                            Per(%): @Html.RadioButton("Gender", "P", new { id = "per" })
+                            Amount: @Html.RadioButton("Gender", "A", new { id = "Amt" })
+                            @Html.ValidationMessageFor(model => model.DiscountType)
+                            @Html.HiddenFor(m => Model.DiscountType)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Discount)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.Discount, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Discount) })
+                            @Html.ValidationMessageFor(model => model.Discount)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.MinPurchaseAmount)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.MinPurchaseAmount, new { style = "width:100%;height:40px;" })
+                            @Html.ValidationMessageFor(model => model.MinPurchaseAmount)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Remarks)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextAreaFor(model => model.Remarks, new { style = "width:100%;height:60px;" })
+                            @Html.ValidationMessageFor(model => model.Remarks)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                        </div>
+
+                        <p>
+                            <input type="submit" value="Submit" class="btn btn-sm btn-primary btn-margin" />
+                        </p>
+
+
+                       
+
+                    </div>
+                }
+            </div>
+    </div>
+
+
+</div>
+<style type="text/css">
+    td.redday, table.ui-datepicker-calendar tbody td.redday a {
+        background: none !important;
+        background-color: red !important;
+        background-image: none !important;
+        color: White !important;
+        font-weight: bold !important;
+        font-size: 12pt;
+    }
+</style>
+@section scripts{
+    <script src="/Scripts/jquery-ui-1.8.24.min.js"></script>
+    <link href="/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $.browser = {
+            msie: false,
+            version: 0
+        };
+        $(function () {
+           
+            $('#ExpiredOn').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'dd MM yy',
+                minDate: 'today',
+
+            });
+            $("#CustomerName").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '/Admin/getCustomerList/',
+                        data: "{ 'Prefix': '" + request.term + "'}",
+                        dataType: "json",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            debugger;
+                            response($.map(data, function (item) {
+                                return {
+                                    label: item.Name,
+                                    val: item.UserId
+                                }
+                            }))
+                        },
+                        error: function (response) {
+                            alert(response.responseText);
+                        },
+                        failure: function (response) {
+                            alert(response.responseText);
+                        }
+                    });
+                },
+                select: function (e, i) {
+                    $("#CustomerId").val(i.item.val);
+                },
+                minLength: 1
+            });
+            $('[name=Gender]').change(function () {
+                var value = $(this).val();
+                $('#DiscountType').val(value);
+            });
+
+        });
+    </script>
+}
+

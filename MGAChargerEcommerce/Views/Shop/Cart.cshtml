@@ -1,0 +1,133 @@
+﻿@model MGAChargerEcommerce.Models.TempCartFunctions
+@{
+	ViewBag.Title = "Cart";
+	Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<div class="breadcrumbs-section plr-200 mb-80">
+	<div class="breadcrumbs overlay-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="breadcrumbs-inner">
+						<h1 class="breadcrumbs-title">Cart</h1>
+						<ul class="breadcrumb-list">
+							<li><a href="/Home/Index">Home</a></li>
+							<li>Cart</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<section id="page-content" class="page-wrapper">
+
+	<!-- SHOP SECTION START -->
+	<div class="shop-section mb-80">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<!-- shopping-cart start -->
+						<div class="tab-pane active" id="shopping-cart">
+							<div class="shopping-cart-content">
+								<form action="#">
+
+									@if (Model.CountCart() == 0)
+									{
+										<div class="thank-you p-30 text-center box-shadow">
+											<h3 class="text-black-5 mb-0" style="margin:60px;">You'r cart is empty.</h3>
+											<a href="/Home/Index" class="button extra-small button-black">
+												<span class="text-uppercase">Continue Shop</span>
+											</a>
+										</div>
+									}
+									else
+									{
+										<div class="table-content table-responsive mb-50">
+											<table class="text-center">
+												<thead>
+													<tr>
+														<th class="product-thumbnail">product</th>
+														<th class="product-price">price</th>
+														<th class="product-quantity">Quantity</th>
+														<th class="product-subtotal">total</th>
+														<th class="product-remove">remove</th>
+													</tr>
+												</thead>
+												<tbody>
+													<!-- tr -->
+													@foreach (var item in Model.GetCartProducts())
+													{
+														<tr>
+
+															<td class="product-thumbnail">
+																<div class="pro-thumbnail-img">
+																	<a href="/Shop/Details/@item.ProductId"><img src="@(!String.IsNullOrEmpty(@item.ProductImage) ? "/Content/ProductImage/"+@item.ProductImage : "/Content/webHome/images/noimage.png")" /></a>
+																</div>
+																<div class="pro-thumbnail-info text-left">
+																	<h6 class="product-title-2">
+																		<a href="/Shop/Details/@item.ProductId">@item.ProductName</a>
+																	</h6>
+																</div>
+															</td>
+															<td class="product-price">₹ @item.PerPrice</td>
+															<td class="product-quantity"><b> @item.Qty </b></td>
+															<td class="product-subtotal">₹ @item.PriceQty</td>
+															<td class="product-remove">
+																<a href="@Url.Action("RemoveFromCart", "Shop", new { id = @item.ProductId })"><i class="zmdi zmdi-close"></i></a>
+															</td>
+														</tr>
+													}
+
+													<!-- tr -->
+												</tbody>
+											</table>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="payment-details box-shadow p-30 mb-50">
+													<h6 class="widget-title border-left mb-20">payment details</h6>
+													<table>
+														<tbody>
+															<tr>
+																<td class="td-title-1">Cart Subtotal</td>
+																<td class="td-title-2">₹ @Model.GetTotal()</td>
+															</tr>
+															<tr>
+																<td class="order-total">Order Total</td>
+																<td class="order-total-price" id="cart-total">₹ @Model.GetTotal()</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="coupon-discount box-shadow p-30 mb-50" style="text-align: end;">
+													<a href="/Shop/Index" class="button extra-small button-black">
+														<span class="text-uppercase">Continue Shop</span>
+													</a>
+													<a href="/Shop/CheckOut" class="button extra-small button">
+														<span class="text-uppercase">Proceed to checkout</span>
+													</a>
+												</div>
+											</div>
+											<div class="col-md-6">
+
+											</div>
+										</div>
+									}
+								</form>
+							</div>
+						</div>
+						<!-- shopping-cart end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SHOP SECTION END -->
+
+</section>

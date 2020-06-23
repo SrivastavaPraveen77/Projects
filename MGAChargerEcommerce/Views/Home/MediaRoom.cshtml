@@ -1,0 +1,70 @@
+﻿@{
+	ViewBag.Title = "Media Room";
+	Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="breadcrumbs-section plr-200 mb-80">
+	<div class="breadcrumbs overlay-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="breadcrumbs-inner">
+						<h1 class="breadcrumbs-title">Media Room</h1>
+						<ul class="breadcrumb-list">
+							<li><a href="/Home/Index">Home</a></li>
+							<li>Media Room</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="page-content" class="page-wrapper">
+
+	<!-- BLOG SECTION START -->
+	<div class="blog-section mb-50">
+		<div class="container">
+
+			<div class="row">
+
+
+
+				@{
+					MGA.Base.ActionResult actionResult = new MGA.Base.ActionResult();
+					MGA.ActionLayer.Home.HomeAL adminAction = new MGA.ActionLayer.Home.HomeAL();
+
+					MGA.BASE.Home.ProductBase baseModel0 = new MGA.BASE.Home.ProductBase();
+					//MGAChargerEcommerce.Models.ManageProduct model = new MGAChargerEcommerce.Models.ManageProduct();
+					//List<MGAChargerEcommerce.Models.ManageProduct> productList = new List<MGAChargerEcommerce.Models.ManageProduct>();
+					baseModel0.ActionId = 11;
+
+					adminAction = new MGA.ActionLayer.Home.HomeAL();
+					actionResult = adminAction.get_Products(baseModel0);
+
+					if (actionResult.dtResult.Rows.Count > 0)
+					{
+						for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+						{
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<a href="@actionResult.dtResult.Rows[i]["EventUrl"].ToString()" target="_blank">
+									<div class="blog-item">
+										<img src="@actionResult.dtResult.Rows[i]["Image"].ToString()" alt="" width="300" height="300">
+										<div class="blog-desc">
+											<p style="font-size:16px; color:white;">
+												@actionResult.dtResult.Rows[i]["EventName"].ToString()
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						}
+					}
+				}
+
+			</div>
+		</div>
+	</div>
+	<!-- BLOG SECTION END -->
+
+</div>

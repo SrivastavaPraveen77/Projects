@@ -1,0 +1,95 @@
+﻿@model MGAChargerEcommerce.Models.TempCartFunctions
+@{
+	ViewBag.Title = "Order Failure";
+	Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="breadcrumbs-section plr-200 mb-80">
+	<div class="breadcrumbs overlay-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="breadcrumbs-inner">
+						@if (Model.CountCart() == 0)
+						{
+							<h1 class="breadcrumbs-title">Empty cart</h1>
+						}
+						else
+						{
+							<h1 class="breadcrumbs-title">Order Failure</h1>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<section id="page-content" class="page-wrapper">
+
+	<!-- SHOP SECTION START -->
+	<div class="shop-section mb-80">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<!-- Tab panes -->
+					@if (Model.CountCart() == 0)
+					{
+						<div class="thank-you p-30 text-center box-shadow">
+							<h3 class="text-black-5 mb-0" style="margin:60px;">You'r cart is empty.</h3>
+							<a href="/Home/Index" class="button extra-small button-black">
+								<span class="text-uppercase">Continue Shop</span>
+							</a>
+						</div>
+					}
+					else
+					{
+						<div class="tab-content">
+							<!-- order-complete start -->
+							<div class="tab-pane active" id="order-complete">
+								<div class="order-complete-content box-shadow">
+									<div class="thank-you p-30 text-center">
+										<h6 class="text-black-5 mb-0">We are facing some technical issues. <br /><br /> We will have it resolved shortly so please try again after some time.</h6>
+									</div>
+
+
+								</div>
+							</div>
+							<!-- order-complete end -->
+						</div>
+					}
+
+					@{
+						Model.ClearCartSession();
+
+						MGA.Base.ActionResult actionResult = new MGA.Base.ActionResult();
+						MGA.ActionLayer.Home.HomeAL adminAction = new MGA.ActionLayer.Home.HomeAL();
+
+						MGA.BASE.Home.ProductBase baseModel = new MGA.BASE.Home.ProductBase();
+						baseModel.ActionId = 7;
+						baseModel.ProductCategory = 2;
+                        if(string.IsNullOrEmpty(Session["orderid"].ToString()))
+                        {
+                            baseModel.ProductId = Convert.ToInt32(6);
+                        }
+                        else
+                        { 
+						baseModel.ProductId = Convert.ToInt32((Session["orderid"].ToString()));
+                            }
+
+						adminAction = new MGA.ActionLayer.Home.HomeAL();
+						actionResult = adminAction.get_Products(baseModel);
+
+						if (actionResult.dtResult.Rows.Count > 0)
+						{
+						}
+
+						Session["orderid"] = null;
+						Session["orderno"] = null;
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SHOP SECTION END -->
+
+</section>

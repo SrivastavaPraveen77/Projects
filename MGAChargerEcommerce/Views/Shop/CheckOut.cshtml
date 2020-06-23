@@ -1,0 +1,622 @@
+﻿@model MGAChargerEcommerce.Models.ProceedCheckOut
+@{
+    /**/
+
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<style type="text/css">
+    .Validat_style {
+        color: #ce6c6c;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .flryt {
+        float: right;
+    }
+</style>
+<div class="breadcrumbs-section plr-200 mb-80">
+    <div class="breadcrumbs overlay-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs-inner">
+                        <h1 class="breadcrumbs-title">
+                            CheckOut
+                        </h1>
+                        <ul class="breadcrumb-list">
+                            <li><a href="/Home/Index">Home</a></li>
+                            <li>CheckOut</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="page-content" class="page-wrapper">
+
+    <!-- SHOP SECTION START -->
+    <div class="shop-section mb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <!-- Tab panes -->
+                    @if (Model.tempCarrtFunction == null)
+                    {
+                        <div class="thank-you p-30 text-center box-shadow">
+                            <h3 class="text-black-5 mb-0" style="margin:60px;">You'r cart is empty.</h3>
+                            <a href="/Shop/Index" class="button extra-small button-black">
+                                <span class="text-uppercase">Continue Shop</span>
+                            </a>
+                        </div>
+                    }
+                    else if (Model.tempCarrtFunction.CountCart() == 0)
+                    {
+                        <div class="thank-you p-30 text-center box-shadow">
+                            <h3 class="text-black-5 mb-0" style="margin:60px;">You'r cart is empty.</h3>
+                            <a href="/Shop/Index" class="button extra-small button-black">
+                                <span class="text-uppercase">Continue Shop</span>
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        if (Session["userName"] != null)
+                        {
+                            <div class="tab-content">
+                                <!-- checkout start -->
+                                <div class="tab-pane active" id="checkout">
+                                    <div class="checkout-content box-shadow p-30">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                @if (TempData["COSuccessMessage"] != null)
+                                                {
+                                                    <div class="alert alert-success" style="margin: 10px 0">
+                                                        @TempData["COSuccessMessage"]
+                                                    </div>
+                                                }
+                                                @if (TempData["COErrorMessage"] != null)
+                                                {
+                                                    <div class="alert alert-danger" style="margin: 10px 0">
+                                                        @TempData["COErrorMessage"]
+                                                    </div>
+                                                }
+
+                                            </div>
+                                            @using (Html.BeginForm("CheckOut", "Shop"))
+                                            {
+                                                <!-- billing details -->
+                                                if (@Model.checkOutModel.Checkoutlist!=null && @Model.checkOutModel.Checkoutlist.Count > 0)
+                                                {
+                                                    <div class="col-md-6">
+                                                        <br />
+                                                        <div class="billing-details pr-10">
+                                                            <h6 class="widget-title border-left mb-20">Enter GST no(if any) / Billing Address</h6>
+                                                            <input type="hidden" runat="server" id="listtrue" name="listrue" value="yes" />
+
+                                                            @Html.AntiForgeryToken()
+                                                            @Html.ValidationSummary(true)
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].BName, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BName) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BName, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].BEmail, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BEmail) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BEmail, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].BPhoneNo, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BMobileNo) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BPhoneNo, null, new { @class = "Validat_style" })
+
+                                                            <br /><br />
+                                                            @*@Html.DropDownListFor(model => model.checkOutModel.Checkoutlist[0].BState, ViewBag.stateListList as List<SelectListItem>, "--Select State--", new { @class = "custom-select" })*@
+                                                            @*@Html.DropDownListFor(model => model.checkOutModel.BState, ViewBag.stateListList as SelectList, "--Select State--", new { @class = "custom-select" })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BState)*@
+                                                            @*@Html.DropDownList("ddlcountry", (List<SelectListItem>)ViewBag.stateListList, "--Select State--")*@
+
+                                                            @*<select id="city" class="custom-select"><option value="defalt">--Select City--</option></select>
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BCity)*@
+                                                            @*<select id="city" class="custom-select"><option value="defalt">--Select City--</option></select>
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BCity)*@
+
+                                                            @Html.TextAreaFor(model => model.checkOutModel.Checkoutlist[0].BAddress, new { @class = "custom-textarea", placeholder = Html.DisplayNameFor(n => n.checkOutModel.BAddress) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BAddress, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].BPinCode, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BPinCode) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BPinCode, null, new { @class = "Validat_style" })
+
+                                                            <input type="hidden" runat="server" id="key" name="key" />
+                                                            <input type="hidden" runat="server" id="hash" name="hash" />
+                                                            <input type="hidden" runat="server" id="txnid" name="txnid" />
+                                                            @Html.HiddenFor(model => model.checkOutModel.Checkoutlist[0].BCity, new { @id = "selectedbillingcityId", @name = "selectedbillingcityId" })
+                                                            @*<input type="hidden" runat="server" id="selectedbillingcityId" name="selectedbillingcityId" />*@
+                                                            <input type="hidden" runat="server" id="enforce_paymethod" name="enforce_paymethod" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" name="sameAdress" id="sameAddress" value="chocolate" /> Same as Billing Address
+                                                        <div class="billing-details pr-10">
+
+                                                            <h6 class="widget-title border-left mb-20">delivery address</h6>
+
+                                                            @Html.AntiForgeryToken()
+                                                            @Html.ValidationSummary(true)
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].DName, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.DName) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].DName, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].DEmail, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.DEmail) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].DEmail, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].BPhoneNo, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.DMobileNo) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BPhoneNo, null, new { @class = "Validat_style" })
+
+                                                            <br /><br />
+                                                            @*@Html.DropDownListFor(model => model.checkOutModel.Checkoutlist[0].DState, ViewBag.stateListList as SelectList, "--Select State--", new { @class = "custom-select" })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].DState)*@
+
+                                                            @*<select id="cityd" class="custom-select"><option value="defalt">--Select City--</option></select>
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].DCity)*@
+
+                                                            @Html.TextAreaFor(model => model.checkOutModel.Checkoutlist[0].DAddress, new { @class = "custom-textarea", placeholder = Html.DisplayNameFor(n => n.checkOutModel.DAddress) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].DAddress, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.Checkoutlist[0].DPinCode, new { id = "txtDeliveryPinCode", placeholder = Html.DisplayNameFor(n => n.checkOutModel.DPinCode) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].DPinCode, null, new { @class = "Validat_style" })
+
+                                                            <input type="hidden" runat="server" id="key" name="key" />
+                                                            <input type="hidden" runat="server" id="hash" name="hash" />
+                                                            <input type="hidden" runat="server" id="txnid" name="txnid" />
+                                                            @Html.HiddenFor(model => model.checkOutModel.Checkoutlist[0].BCity, new { @id = "selectedDeliverycityId" , @name = "selectedDeliverycityId" })
+                                                            @*<input type="hidden" runat="server" id="selectedDeliverycityId" name="selectedDeliverycityId" />*@
+                                                            <input type="hidden" runat="server" id="enforce_paymethod" name="enforce_paymethod" />
+                                                        </div>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-md-6">
+                                                        <br />
+                                                        <div class="billing-details pr-10">
+                                                            <h6 class="widget-title border-left mb-20">billing Address</h6>
+
+                                                            @Html.AntiForgeryToken()
+                                                            @Html.ValidationSummary(true)
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.BName, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BName) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BName, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.BEmail, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BEmail) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].BEmail, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.BMobileNo, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BMobileNo) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BMobileNo, null, new { @class = "Validat_style" })
+
+                                                            <br /><br />
+                                                            @*@Html.DropDownListFor(model => model.checkOutModel.Checkoutlist[0].BState, ViewBag.stateListList as List<SelectListItem>, "--Select State--", new { @class = "custom-select" })*@
+                                                            @*@Html.DropDownListFor(model => model.checkOutModel.BState, ViewBag.stateListList as SelectList, "--Select State--", new { @class = "custom-select" })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BState)*@
+
+                                                            @*<select id="city" class="custom-select"><option value="defalt">--Select City--</option></select>
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BCity)*@
+
+                                                            @Html.TextAreaFor(model => model.checkOutModel.BAddress, new { @class = "custom-textarea", placeholder = Html.DisplayNameFor(n => n.checkOutModel.BAddress) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BAddress, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.BPinCode, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.BPinCode) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.BPinCode, null, new { @class = "Validat_style" })
+
+                                                            <input type="hidden" runat="server" id="key" name="key" />
+                                                            <input type="hidden" runat="server" id="hash" name="hash" />
+                                                            <input type="hidden" runat="server" id="txnid" name="txnid" />
+                                                            <input type="hidden" runat="server" id="selectedbillingcityId" name="selectedbillingcityId" />
+                                                            <input type="hidden" runat="server" id="enforce_paymethod" name="enforce_paymethod" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" name="sameAdress" id="sameAddress" value="chocolate" /> Same as Billing Address
+                                                        <div class="billing-details pr-10">
+
+                                                            <h6 class="widget-title border-left mb-20">delivery address</h6>
+
+                                                            @Html.AntiForgeryToken()
+                                                            @Html.ValidationSummary(true)
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.DName, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.DName) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.DName, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.DEmail, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.DEmail) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.DEmail, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.DMobileNo, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.DMobileNo) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.DMobileNo, null, new { @class = "Validat_style" })
+
+                                                            <br /><br />
+                                                            @*@Html.DropDownListFor(model => model.checkOutModel.DState, ViewBag.stateListList as List<SelectListItem>, "--Select State--", new { @class = "custom-select" })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.DState)*@
+
+                                                            @*<select id="cityd" class="custom-select"><option value="defalt">--Select City--</option></select>
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.Checkoutlist[0].DCity)*@
+
+                                                            @Html.TextAreaFor(model => model.checkOutModel.DAddress, new { @class = "custom-textarea", placeholder = Html.DisplayNameFor(n => n.checkOutModel.DAddress) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.DAddress, null, new { @class = "Validat_style" })
+
+                                                            @Html.TextBoxFor(model => model.checkOutModel.DPinCode, new { id = "txtDeliveryPinCode", placeholder = Html.DisplayNameFor(n => n.checkOutModel.DPinCode) })
+                                                            @Html.ValidationMessageFor(model => model.checkOutModel.DPinCode, null, new { @class = "Validat_style" })
+
+                                                            <input type="hidden" runat="server" id="key" name="key" />
+                                                            <input type="hidden" runat="server" id="hash" name="hash" />
+                                                            <input type="hidden" runat="server" id="txnid" name="txnid" />
+                                                            <input type="hidden" runat="server" id="selectedDeliverycityId" name="selectedDeliverycityId" />
+                                                            <input type="hidden" runat="server" id="enforce_paymethod" name="enforce_paymethod" />
+                                                        </div>
+                                                    </div>
+                                                }
+                                                <div class="col-md-12 mt-50">
+                                                    <div class="pl-10 mb-50">
+                                                        <div class="col-md-4" style="
+    font-weight: bold;
+    color: black;
+">Do you have Any Coupon</div>
+                                                        <div class="col-md-8"> <input type="checkbox" id="chkisHave" onclick="isHaveCoupon()"> </div>
+                                                    </div>
+                                                    <div class="pl-10 mb-50" id="divCoupon" style="display:none">
+                                                        <div class="col-md-4" style="
+    font-weight: bold;
+    color: black;
+">Enter here your Code</div>
+                                                        <div class="col-md-4"> @Html.TextBoxFor(model => model.checkOutModel.CouponCode, new { placeholder = Html.DisplayNameFor(n => n.checkOutModel.CouponCode),@class="form-controll"
+                                                                          } )
+                                                        <span id="msgcoup"></span>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <p id="btnApplyCoupon" class="btn btn-primary" onclick="applyCoupon()"> Apply Coupon</p>
+                                                            <span id="couponstatus"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mt-50">
+                                                    <!-- our order -->
+                                                    <div class="payment-details pl-10 mb-50">
+                                                        <h6 class="widget-title border-left mb-20">our order</h6>
+                                                        <table>
+                                                            <tbody>
+                                                                @foreach (var item in Model.tempCarrtFunction.GetCartProducts())
+                                                                {
+                                                                    <tr>
+                                                                        <td class="td-title-1">@item.ProductName</td>
+                                                                        <td class="td-title-2">₹ @item.PriceQty</td>
+                                                                    </tr>
+                                                                }
+                                                                <tr>
+                                                                    <td class="td-title-1">Cart Subtotal</td>
+                                                                    <td class="td-title-2">₹ <span id="subTotl"> @Model.tempCarrtFunction.GetTotal()</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="td-title-1">Discount </td>
+                                                                    <td class="td-title-2">₹ <span id="discountAmount">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="td-title-1">Shipping and Handing</td>
+                                                                    @if (Model.checkOutModel.Checkoutlist.Count > 0)
+                                                                    {
+                                                                        <td class="td-title-2"><span id="ShippingChrg">@(Convert.ToInt32(TempData["Qty"]) * @Convert.ToInt32(Model.checkOutModel.Checkoutlist[0].Shipingcharges))</span></td>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <td class="td-title-2">₹ <span id="ShippingChrg"> 100.00</span></td>
+                                                                    }
+                                                                </tr>
+                                                                <tr>
+                                                                    @{
+
+                                                                        <td class="order-total">Grant Total</td>
+                                                                        if (Model.checkOutModel.Checkoutlist.Count > 0)
+                                                                        {
+                                                                        <td class="order-total-price">
+                                                                            ₹ <span id="orderTotal">0</span>
+
+                                                                        </td>
+
+                                                                        }
+                                                                    }
+                                                                </tr>
+                                                               
+                                                            </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!-- payment-method end -->
+                                                        <button class="submit-btn-1 mt-30 btn-hover-1 flryt" type="submit">place order</button>
+                                                    </div>
+
+                                                                        }
+                                        </div>
+                                                                       
+                                            </div>
+                                        </div>
+                                        <!-- checkout end -->
+                                    </div>
+                            <div class="thank-you p-30 text-center box-shadow">
+                                        <h3 class="text-black-5 mb-0" style="margin:60px;">Login/ Register first to continue.</h3>
+                                        <a href="/Home/LoginRegister" class="button extra-small button-black">
+                                            <span class="text-uppercase">Continue</span>
+                                        </a>
+                                    </div>
+                        }
+                     }
+              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SHOP SECTION END -->
+
+                </section>
+                <script type="text/javascript" src="@Url.Content("~/Content/js/jquery-1.11.3.min.js")"></script>
+                <script>
+                    $(function () {
+                        debugger;
+                        bindcity();
+                        Grandtotal();
+                    });
+                    
+                    $("#checkOutModel_Checkoutlist_0__BState").change(function () {
+                        debugger;
+                        var stateid = $(this).val();
+                        $("#city").empty();
+                        $.get("/Shop/City_Bind",
+                            { id: stateid },
+                            function (data) {
+                                debugger;
+                                var v = "<option>---Select City---</option>";
+                                $.each(data, function (i, v1) {
+                                    v += "<option value=" + v1.Value + ">" + v1.Text + "</option>";
+                                });
+                                $("#city").html(v);
+                                var cityId = $("#selectedbillingcityId").val();
+                                $("#city").val(cityId);
+
+                            });
+                    });
+
+                    $("#checkOutModel_BState").change(function () {
+                        var stateid = $(this).val();
+                        $("#city").empty();
+                        $.get("/Shop/City_Bind",
+                            { id: stateid },
+                            function (data) {
+                                var v = "<option>---Select City---</option>";
+                                $.each(data, function (i, v1) {
+                                    v += "<option value=" + v1.Value + ">" + v1.Text + "</option>";
+                                });
+                                $("#city").html(v);
+                            });
+                    });
+
+          
+                    $("#checkOutModel_Checkoutlist_0__DState").change(function () {
+                        var stateid = $(this).val();
+                        $("#cityd").empty();
+                        $.get("/Shop/City_Bind",
+                            { id: stateid },
+                            function (data) {
+                                var v = "<option>---Select City---</option>";
+                                $.each(data, function (i, v1) {
+                                    v += "<option value=" + v1.Value + ">" + v1.Text + "</option>";
+                                });
+                                $("#cityd").html(v);
+                                var cityId = $("#selectedDeliverycityId").val();
+                                $("#city").val(cityId);
+                            });
+                    });
+
+                    $("#checkOutModel_DState").change(function () {
+                        var stateid = $(this).val();
+                        $("#city").empty();
+                        $.get("/Shop/City_Bind",
+                            { id: stateid },
+                            function (data) {
+                                var v = "<option>---Select City---</option>";
+                                $.each(data, function (i, v1) {
+                                    v += "<option value=" + v1.Value + ">" + v1.Text + "</option>";
+                                });
+                                $("#cityd").html(v);
+                            });
+                    });
+
+                    $("#city").change(function () {
+
+                        $("#selectedbillingcityId").val($("#city").val());
+                    });
+
+                    $("#cityd").change(function () {
+
+                        $("#selectedDeliverycityId").val($("#cityd").val());
+                    });
+
+               
+                    $('#checkOutModel_Checkoutlist_0__BPinCode').change(function () {
+                        var recordId = this.value;
+                        $.getJSON("/Shop/GetShippingCharges",
+                            {
+                                id: recordId
+                            },
+                            function (data) {
+                                $('RecordName').val(data.Name);
+                                $('RecordType').val(data.Type);
+                            });
+                    });
+
+
+
+                    $('#sameAddress').click(function () {
+                        debugger;
+                        var thisCheck = $(this);
+                        if ($(this).is(':checked')) {
+                            if ($("#listtrue").val() == "yes") {
+                                $('#checkOutModel_Checkoutlist_0__DName').val($("#checkOutModel_Checkoutlist_0__BName").val());
+                                $("#checkOutModel_Checkoutlist_0__DEmail").val($("#checkOutModel_Checkoutlist_0__BEmail").val());
+                                $("#checkOutModel_Checkoutlist_0__DMobileNo").val($("#checkOutModel_Checkoutlist_0__BMobileNo").val());
+                                $("#checkOutModel_Checkoutlist_0__DAddress").val($("#checkOutModel_Checkoutlist_0__BAddress").val());
+                                $("#txtDeliveryPinCode").val($("#checkOutModel_Checkoutlist_0__BPinCode").val());
+                                $("#checkOutModel_Checkoutlist_0__DState").val($("#checkOutModel_Checkoutlist_0__BState").val()).trigger('change');
+                                $("#selectedDeliverycityId").val($("#selectedbillingcityId").val());
+                                bindcityD();
+                               
+                            }
+                            else {
+                                $('#checkOutModel_DName').val($("#checkOutModel_BName").val());
+                                $("#checkOutModel_DEmail").val($("#checkOutModel_BEmail").val());
+                                $("#checkOutModel_DMobileNo").val($("#checkOutModel_BMobileNo").val());
+                                $("#checkOutModel_DAddress").val($("#checkOutModel_BAddress").val());
+                                $("#txtDeliveryPinCode").val($("#checkOutModel_BPinCode").val());
+                            }
+
+                        }
+                        else {
+
+
+                            if ($("#listtrue").val() == "yes") {
+                                $('#checkOutModel_Checkoutlist_0_DName').val("");
+                                $("#checkOutModel_Checkoutlist_0_DEmail").val("");
+                                $("#checkOutModel_Checkoutlist_0_DMobileNo").val("");
+                                $("#checkOutModel_Checkoutlist_0_DAddress").val("");
+                                $("#txtDeliveryPinCode").val("");
+                            }
+                            else {
+
+                                $('#checkOutModel_DName').val();
+                                $("#checkOutModel_DEmail").val();
+                                $("#checkOutModel_DMobileNo").val();
+                                $("#checkOutModel_DAddress").val();
+                                $("#txtDeliveryPinCode").val();
+                            }
+                        }
+                    });
+
+                    function isHaveCoupon() {
+                        debugger;
+                        // Get the checkbox
+                        var checkBox = $("#chkisHave");
+                        // Get the output text
+                        var _divCoupon = $("#divCoupon");
+                        // If the checkbox is checked, display the output text
+                        if (checkBox.prop("checked") == true) {
+                            _divCoupon.css("display", "block");
+                        } else {
+                            _divCoupon.css("display", "none");
+                        }
+                    }
+                    function applyCoupon() {
+                        debugger;
+                        var _couponcode = $('#checkOutModel_CouponCode').val();
+                        var _userid = 2054;
+                        $.ajax({
+                            type: 'POST',
+                            data: {'couponCode': _couponcode ,'custid': _userid},
+                            url: "/Admin/getCouponDetails",
+                            async: false,
+                            dataType: 'text',
+                            success: function (data) {
+                                debugger;
+                                if (data) {
+                                    var d = JSON.parse(data);
+                                   if(d.length <= 0)
+                                   {
+                                       $('#checkOutModel_CouponCode').val('');
+                                       $('#msgcoup').html(_couponcode + ' Not A Valid Coupon Or Expired.');
+                                       $('#msgcoup').css("color", "red");
+                                       $('#checkOutModel_CouponCode').css('border-color', 'red');
+                                       $('#discountAmount').html(0);
+                                       Grandtotal();
+                                        return;
+                                    }
+                                    if  (d[0].isUsed==0) {
+                                        var discountAmt = 0;
+                                        var amtWithoutDiscount = parseFloat( $('#subTotl').html());
+                                        var discounttype = d[0].DiscountType;
+                                        if (d[0].MinPurchaseAmount > 0 && amtWithoutDiscount < d[0].MinPurchaseAmount) {
+                                            $('#checkOutModel_CouponCode').val('');
+                                            $('#msgcoup').html('your min purchase Amount should be ' + amtWithoutDiscount);
+                                            $('#msgcoup').css("color", "red");
+                                        }
+                                        if (discounttype == "P") {
+                                            discountAmt = parseInt((amtWithoutDiscount * parseFloat(d[0].Discount) / 100.0));
+                                           
+                                        }
+                                        else {
+                                            discountAmt = parseInt(d[0].Discount);
+                                        }
+                                        $('#discountAmount').html(discountAmt);
+                                        Grandtotal();
+                                        $('#checkOutModel_CouponCode').css('border-color', 'green');
+                                        $('#msgcoup').html('Coupon Applied');
+                                        $('#msgcoup').css("color", "green");
+                                    }
+                                    else {
+                                        $('#checkOutModel_CouponCode').val('');
+                                        $('#msgcoup').html(_couponcode + ' Already Used');
+                                        $('#msgcoup').css("color", "red");
+                                        $('#checkOutModel_CouponCode').css('border-color', 'red');
+                                        $('#discountAmount').html(0);
+                                        Grandtotal();
+                                    }
+                                }
+                                else {
+                                    $('#checkOutModel_CouponCode').val('');
+                                    $('#msgcoup').html(_couponcode + ' Not a Valid Coupon.');
+                                    $('#msgcoup').css("color", "red");
+                                    $('#checkOutModel_CouponCode').css('border-color', 'red');
+                                    $('#discountAmount').html(0);
+                                    Grandtotal();
+                                }
+                            }
+                        });
+                    }
+                    function Grandtotal() {
+                        debugger;
+                        var subtotl = $('#subTotl').html();
+                        var disc = $('#discountAmount').html();
+                        var shippingChrg = $('#ShippingChrg').html();
+                        var GrandTotal = parseFloat(subtotl) + parseFloat(shippingChrg) - parseFloat(disc);
+                        $('#orderTotal').html(GrandTotal.toFixed(2));
+
+                    }
+                    function bindcity() {
+                           debugger;
+                            var stateid = $("#checkOutModel_Checkoutlist_0__BState").val();
+                            $("#city").empty();
+                            $.get("/Shop/City_Bind",
+                                { id: stateid },
+                                function (data) {
+                                    var v = "<option>---Select City---</option>";
+                                    $.each(data, function (i, v1) {
+                                        v += "<option value=" + v1.Value + ">" + v1.Text + "</option>";
+                                    });
+                                    $("#city").html(v);
+                                    var cityId = $("#selectedbillingcityId").val();
+                                    $("#city").val(cityId).trigger('change');
+
+                                });
+
+                    }
+                    function bindcityD() {
+                        debugger;
+                        var stateid = $("#checkOutModel_Checkoutlist_0__DState").val();
+                            $("#cityd").empty();
+                            $.get("/Shop/City_Bind",
+                                { id: stateid },
+                                function (data) {
+                                    var v = "<option>---Select City---</option>";
+                                    $.each(data, function (i, v1) {
+                                        v += "<option value=" + v1.Value + ">" + v1.Text + "</option>";
+                                    });
+                                    $("#cityd").html(v);
+                                    var cityId = $("#selectedDeliverycityId").val();
+                                    $("#cityd option[value=" + cityId+"]").attr('selected', 'selected');//.val(cityId).trigger('change');
+                                });
+
+                    }
+                </script>

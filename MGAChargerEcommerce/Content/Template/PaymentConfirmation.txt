@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vidyarthi Kendra</title>
+</head>
+<body>
+    <table style='background-color: #ededed; border: 0; padding: 25px; width: 80%; margin: 0 auto;'>
+        <tr>
+            <td colspan='2' style='background-color: #3D8D93; verticle-align:bottom; color: white; font-size: 20px; border-collapse: collapse; padding: 25px; width: 100%;'>
+              <a href="#" style="font-family: 'Pacifico', cursive; color: #1fbaef; text-decoration: none; letter-spacing: 2px;"><span style="color: #fff;">Vidyarthi</span> Kendra</a>
+
+            </td>
+        </tr>
+        <tr>
+            <td style='background-color: white; color: black; padding: 20px;'>
+                <p style='margin:10px 0;'> <span style='color: #863b53; width:150px; display:inline-block;'> {0}</span><p>
+                
+                </td>
+        </tr>
+        <tr>
+            <td style='background-color: white; color: black; padding: 8px;'></td>
+        </tr>
+        <tr>
+            <td style='padding: 8px;'></td>
+        </tr>
+        <tr>
+            
+        </tr>
+        <tr>
+            <td style='background-color: #3D8D93;color: white; padding:10px; font-size:13px;'>Thank you <br />
+                Vidyarthi Kendra !!
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2' style='padding: 10px;'></td>
+        </tr>
+    </table>
+</body>
+</html>

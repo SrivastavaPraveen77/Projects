@@ -1,0 +1,178 @@
+﻿@model MGAChargerEcommerce.Models.ComplaintDetail
+@{
+    ViewBag.Title = "updateComplaintDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="col-md-6">
+
+            <div class="panel panel-default" style="margin-top: 10px;">
+                <div class="panel-heading">Customer Care Panel</div>
+                <div class="panel-body">
+                    <div id="msg"></div>
+
+                    @if (TempData["SuccessMessage"] != null)
+                {
+                <div class="alert alert-success" role="alert" id="datamasg">@TempData["SuccessMessage"].ToString()</div>
+                }
+                else if (TempData["ErrorMessage"] != null)
+                {
+                <div class="alert alert-danger" role="alert" id="datamasg1">@TempData["ErrorMessage"].ToString()</div>
+                }
+
+                    <div class="col-md-6 cat-form">
+                        @using (Html.BeginForm("updateComplaintDetail", "Admin", FormMethod.Post, new { Id = "form1" }))
+                    {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+                    <div class="editor-label">
+                        @Html.HiddenFor(model => model.Id)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.CustomerName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CustomerName)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ContactNo, new { @class = "col-sm-3 control-label" })
+                    </div>
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.ContactNo, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.ContactNo) })
+                        @Html.ValidationMessageFor(model => model.ContactNo)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerEmail)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.CustomerEmail, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.CustomerEmail) })
+                        @Html.ValidationMessageFor(model => model.CustomerEmail)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DealerName, new { @class = "col-sm-3 control-label" })
+                    </div>
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.DealerName, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.DealerName) })
+                        @Html.ValidationMessageFor(model => model.DealerName)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.InvoiceNo, new { @class = "col-sm-3 control-label" })
+                    </div>
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.InvoiceNo, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.InvoiceNo) })
+                        @Html.ValidationMessageFor(model => model.InvoiceNo)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.PurchaseDate)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.PurchaseDate, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.PurchaseDate) })
+                        @Html.ValidationMessageFor(model => model.PurchaseDate)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ProductSerialNo)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.ProductSerialNo, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.ProductSerialNo) })
+                        @Html.ValidationMessageFor(model => model.ProductSerialNo)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ModalNo)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.ModalNo, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.ModalNo) })
+                        @Html.ValidationMessageFor(model => model.ModalNo)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Complaint)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.Complaint, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.Complaint) })
+                        @Html.ValidationMessageFor(model => model.Complaint)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Status)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.Status, (IEnumerable<SelectListItem>)ViewBag.complaintList, "--Select Status--", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Status)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Remark)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.Remark, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.Remark) })
+                        @Html.ValidationMessageFor(model => model.Remark)
+                    </div>
+
+
+                    <div class="editor-field">
+                        <input type="submit" value="Submit" class="btn btn-sm btn-primary resbtn" />
+
+                    </div>
+                    }
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        <div class="col-md-6">
+                <div class="panel panel-default" style="margin-top: 10px;">
+                <div class="panel-heading">Contact Info</div>
+                                     <ul class="widget_info_contact">
+                        <li>
+                        <i class="fa fa-map-marker"></i><p>
+                            <strong>Address</strong>:<span style="text-align:right;">&nbsp;34-A Narayan nagar,Near Ravindrapalli,Road,Lucknow-226016</span></p></li>
+                        <li>
+                            <i class="fa fa-user"></i><p>
+                                <strong>For Sale</strong>:&nbsp;
+                                0522-4302579 / 7607001606/7/8/9
+                            </p>
+                        </li>
+                        <li><i class="fa fa-user"></i><p><strong>For Bulk Orders</strong>:&nbsp;7499394690</p></li>
+                        <li>
+                            <i class="fa fa-user"></i><p>
+                                <strong>For Services</strong>:&nbsp;
+                                0522-4062503 / 7607001604
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fa fa-user"></i><p>
+                                <strong>C. Care</strong>:&nbsp;
+                            </p>
+                        </li>
+                        <li><i class="fa fa-envelope"></i><p><strong>Email</strong>: <a href="mailto:salesmgacharger@gmail.com">&nbsp;salesmgacharger@gmail.com</a></p></li>
+                        <li><i class="fa fa-globe"></i><p><strong>Web</strong>: <a href="#" data-placement="bottom" data-toggle="tooltip" title="www.mgacharger.com">www.mgacharger.com</a></p></li>
+                    </ul>
+
+                    
+             
+            </div>
+
+
+
+
+
+
+        </div>
+        </div>
+
+</div>
+

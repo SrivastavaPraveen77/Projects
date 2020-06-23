@@ -1,0 +1,518 @@
+﻿@model MGAChargerEcommerce.Models.ManageProduct
+@{
+    ViewBag.Title = @Model.ManageProductlist[0].ProductName;
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<style type="text/css">
+    .sty
+    {
+        margin-top: 0px !important;
+    }
+    
+    *
+    {
+        box-sizing: border-box;
+    }
+    
+    .img-zoom-container
+    {
+        position: relative;
+    }
+    
+    .img-zoom-lens
+    {
+        position: absolute;
+        border: 1px solid #d4d4d4; /*set the size of the lens:*/
+        width: 40px;
+        height: 40px;
+    }
+    
+    .img-zoom-result
+    {
+        border: 1px solid #d4d4d4; /*set the size of the result div:*/
+        width: 100%;
+        height: 400px;
+    }
+    
+    #overlay
+    {
+        border: 1px solid black;
+        width: 350px;
+        height: 200px;
+        display: inline-block;
+        background-repeat: no-repeat;
+    }
+    
+    
+    .tiles
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .tile
+    {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .photo
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: transform .5s ease-out;
+    }
+    
+    .txt
+    {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        bottom: 10%;
+        left: 0;
+        font-family: 'Roboto Slab' , serif;
+        font-size: 9px;
+        line-height: 12px;
+        text-align: center;
+        cursor: default;
+    }
+    
+    .x
+    {
+        font-size: 32px;
+        line-height: 32px;
+    }
+</style>
+<style>
+    *
+    {
+        box-sizing: border-box;
+    }
+    
+    .img-magnifier-container
+    {
+        position: relative;
+    }
+    
+    .img-magnifier-glass
+    {
+        position: absolute;
+        border: 3px solid #000;
+        border-radius: 50%;
+        cursor: none; /*Set the size of the magnifier glass:*/
+        width: 120px;
+        height: 130px;
+    }
+</style>
+<script>
+    function magnify(imgID, zoom) {
+        var img, glass, w, h, bw;
+        img = document.getElementById(imgID);
+        /*create magnifier glass:*/
+        glass = document.createElement("DIV");
+        glass.setAttribute("class", "img-magnifier-glass");
+        glass.setAttribute("id", "divmgglass");
+        /*insert magnifier glass:*/
+        img.parentElement.insertBefore(glass, img);
+        /*set background properties for the magnifier glass:*/
+        glass.style.backgroundImage = "url('" + img.src + "')";
+        glass.style.backgroundRepeat = "no-repeat";
+        glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+        bw = 3;
+        w = glass.offsetWidth / 2;
+        h = glass.offsetHeight / 2;
+        /*execute a function when someone moves the magnifier glass over the image:*/
+        glass.addEventListener("mousemove", moveMagnifier);
+        img.addEventListener("mousemove", moveMagnifier);
+        /*and also for touch screens:*/
+        glass.addEventListener("touchmove", moveMagnifier);
+        img.addEventListener("touchmove", moveMagnifier);
+        function moveMagnifier(e) {
+            var pos, x, y;
+            /*prevent any other actions that may occur when moving over the image*/
+            e.preventDefault();
+            /*get the cursor's x and y positions:*/
+            pos = getCursorPos(e);
+            x = pos.x;
+            y = pos.y;
+            /*prevent the magnifier glass from being positioned outside the image:*/
+            if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
+            if (x < w / zoom) { x = w / zoom; }
+            if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
+            if (y < h / zoom) { y = h / zoom; }
+            /*set the position of the magnifier glass:*/
+            glass.style.left = (x - w) + "px";
+            glass.style.top = (y - h) + "px";
+            /*display what the magnifier glass "sees":*/
+            glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+        }
+        function getCursorPos(e) {
+            var a, x = 0, y = 0;
+            e = e || window.event;
+            /*get the x and y positions of the image:*/
+            a = img.getBoundingClientRect();
+            /*calculate the cursor's x and y coordinates, relative to the image:*/
+            x = e.pageX - a.left;
+            y = e.pageY - a.top;
+            /*consider any page scrolling:*/
+            x = x - window.pageXOffset;
+            y = y - window.pageYOffset;
+            return { x: x, y: y };
+        }
+    }
+</script>
+<div class="breadcrumbs-section plr-200 mb-80">
+    <div class="breadcrumbs overlay-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs-inner">
+                        <input type="hidden" id="ProductName" />
+                        <h1 class="breadcrumbs-title">@Model.ManageProductlist[0].ProductName</h1>
+                        <input type="hidden" id="productName" value="@Model.ManageProductlist[0].ProductName">
+                        <input type="hidden" id="productId" value="@Model.ManageProductlist[0].ProductId">
+                        <ul class="breadcrumb-list">
+                            <li><a href="/Home/Index">Home</a></li>
+                            <li><a href="/Home/Shop">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="page-content" class="page-wrapper">
+
+    <!-- SHOP SECTION START -->
+    <div class="shop-section mb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <!-- single-product-area start -->
+                    <div class="single-product-area mb-80">
+                        <div class="row">
+                            <!-- imgs-zoom-area start -->
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+
+                                <div class="imgs-zoom-area">
+                                    <input type="hidden" id="productImage" value="@Model.ManageProductlist[0].ProductImage" />
+                                    @*<img id="zoom_01" src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImage) ? "/Content/ProductImage/"+Model.ManageProductlist[0].ProductImage : "/Content/webHome/images/noimage.png")" data-zoom-image="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImage) ? "/Content/ProductImage/"+Model.ManageProductlist[0].ProductImage : "/Content/webHome/images/noimage.png")" />
+                                        <img src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImage) ? "/Content/ProductImage/"+Model.ManageProductlist[0].ProductImage : "/Content/webHome/images/noimage.png")" />*@
+
+                                    <div class="img-magnifier-container">
+                                        <img id="myimage" src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImage) ? "/Content/ProductImage/" + Model.ManageProductlist[0].ProductImage : "/Content/webHome/images/noimage.png")" data-zoom-image="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImage) ? "/Content/ProductImage/" + Model.ManageProductlist[0].ProductImage : "/Content/webHome/images/noimage.png")">
+
+                                        <script>
+                                            /* Initiate Magnify Function
+                                            with the id of the image, and the strength of the magnifier glass:*/
+                                            magnify("myimage", 3);
+                                        </script>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div id="gallery_01" class="carousel-btn slick-arrow-3 mt-50 mb-40 slick-initialized slick-slider">
+                                                <div aria-live="polite" class="slick-list draggable">
+
+                                                    <div class="slick-track" role="listbox" style="opacity: 1; width: 1400px; transform: translate3d(-400px, 0px, 0px);">
+                                                        <div class="p-c slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 95px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" tabindex="-1">
+                                                                <img id="myimagse1" class="zoom_03" src="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" height="90">
+                                                            </a>
+                                                        </div>
+                                                        <div class="p-c slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 95px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" tabindex="-1">
+                                                                <img id="myimagse1" class="zoom_03" src="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" height="90">
+                                                            </a>
+                                                        </div>
+                                                        <div class="p-c slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 100px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" tabindex="-1">
+                                                                <img id="myimagse1" class="zoom_03" src="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" height="90">
+                                                            </a>
+                                                        </div>
+                                                        <div class="p-c slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 100px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" tabindex="-1">
+                                                                <img id="myimagse1" class="zoom_03" src="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" height="90">
+                                                            </a>
+                                                        </div>
+
+                                                        @*Bind multiple image here  START *@
+
+                                                        <div class="p-c slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 80px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/logo.png" data-zoom-image="~/Content/webHome/images/logo.png" tabindex="-1">
+                                                                <img id="myProductImageSideview" class="zoom_03" src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImageSideView) ? "/Content/ProductImage/" + Model.ManageProductlist[0].ProductImageSideView : "/Content/webHome/images/noimage.png")" height="90">
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="p-c slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 80px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/logo.png" data-zoom-image="~/Content/webHome/images/logo.png" tabindex="-1">
+                                                                <img id="myProductImageTopview" class="zoom_03" src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImageTopView) ? "/Content/ProductImage/" + Model.ManageProductlist[0].ProductImageTopView : "/Content/webHome/images/noimage.png")" height="90">
+
+                                                            </a>
+                                                        </div>
+                                                        <div class="p-c slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 80px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/logo.png" data-zoom-image="~/Content/webHome/images/logo.png" tabindex="-1">
+                                                                <img id="myProductImageBottomview" class="zoom_03" src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImageBottomView) ? "/Content/ProductImage/" + Model.ManageProductlist[0].ProductImageBottomView : "/Content/webHome/images/noimage.png")" height="90">
+
+                                                            </a>
+                                                        </div>
+                                                        <div class="p-c slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide14" style="width: 80px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" tabindex="-1">
+                                                                <img id="myProductImageDetailview" class="zoom_03" src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductDetailImage) ? "/Content/ProductImage/" + Model.ManageProductlist[0].ProductDetailImage : "/Content/webHome/images/noimage.png")" height="90">
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="p-c slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide14" style="width: 80px;">
+                                                            <a href="#" data-image="~/Content/webHome/images/noimage.png" data-zoom-image="~/Content/webHome/images/noimage.png" tabindex="-1">
+                                                                <img id="myProductImageview" class="zoom_03" src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImage) ? "/Content/ProductImage/" + Model.ManageProductlist[0].ProductImage : "/Content/webHome/images/noimage.png")" height="90">
+                                                            </a>
+                                                        </div>
+
+                                                        @*Bind multiple image here  END    Remove width put height 60 px*@
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- imgs-zoom-area end -->
+                            <!-- single-product-info start -->
+                            <div class="col-md-7 col-sm-7 col-xs-12">
+                                <div class="single-product-info">
+                                    @*<h3 class="text-black-1">Dummy Product Name </h3>
+                                        <h6 class="brand-name-2">brand name</h6>*@
+                                    <!-- hr -->
+                                    <!-- single-product-tab -->
+                                    <div class="single-product-tab">
+                                        <ul class="reviews-tab mb-20">
+                                            <li class="active"><a href="#description" data-toggle="tab">description</a></li>
+                                            <li><a href="#reviews" data-toggle="tab">RETURN POLICY</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="description">
+                                                <p>
+                                                    @Html.Raw(@Model.ManageProductlist[0].ProductDescription)
+                                                </p>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="reviews">
+                                                <p class="ul_desc">15 Days Return/Replacement Policy - Product return or replacement is accepted by MGA Charger within 15 days of product delivery only in case a wrong or damaged product has been delivered. Cancellation allowed.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--  hr -->
+                                    <hr>
+                                    <input type="text" id="pincode" maxlength="6" placeholder="Please Enter Pincode" style=" width: 144px; margin-left: 60px; margin-bottom: 25px;" class="cart-plus-minus-box sty">
+                                    <label id="Isavailable"></label>
+                                    <div class="plus-minus-pro-action clearfix">
+
+                                        <div class="sin-plus-minus f-left clearfix">
+                                            <p class="color-title f-left">Qty</p>
+                                            <div class="cart-plus-minus f-left">
+
+                                                <input type="text" value="1" name="qtybutton" id="qtybutton" class="cart-plus-minus-box sty">
+
+                                            </div>
+                                        </div>
+                                        <div class="sin-pro-action f-right">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h3 class="pro-price">Unit Price: ₹ @Model.ManageProductlist[0].ProductRate</h3>
+                                    <hr>
+                                    @*<h3 class="pro-price">Tax: ₹ @Model.ManageProductlist[0].TotalTax</h3>*@
+                                    <h3 class="pro-price">Tax: ₹ @Model.ManageProductlist[0].IGSTAmount</h3>
+                                    <hr>
+                                    <h3 class="pro-price">Total Amount: ₹ @Model.ManageProductlist[0].TotalAmountIncludeTax</h3>
+                                    <input type="hidden" id="totalAmount" value="@Model.ManageProductlist[0].TotalAmountIncludeTax">
+                                    <hr>
+                                    @if(!String.IsNullOrEmpty(Model.ManageProductlist[0].OfferDescription))
+                                    { 
+                                    <h5 class="pro-price" style="color:Red">Offer: @Html.Raw(@Model.ManageProductlist[0].OfferDescription)</h5>
+                                    <hr>
+                                    }
+                                   
+                                    <div>
+                                        @*@Html.ActionLink("Add to cart", "AddToCart", "Shop", new { id = Model.ManageProductlist[0].ProductId,
+                                              productname = Model.ManageProductlist[0].ProductName, qty =6, productRate = Model.ManageProductlist[0].ProductRate,
+                                              productImage = Model.ManageProductlist[0].ProductImage
+                                            },  new { @class = "cartButton1" })*@
+
+                                        <div class=" f-left clearfix">
+                                            <div class=" f-left">
+                                                <input type="button" id="btnAddToCart" class="cartButton1" value="Add To Cart" />
+                                            </div>
+                                        </div>
+                                        <div class="">
+
+                                        
+                                   @*      @Html.ActionLink("Buy Now", "BuyNow_Details", "Shop", new
+                                              {
+                                                  
+                                                  id = @Model.ManageProductlist[0].ProductId,
+                                                  productname = @Model.ManageProductlist[0].ProductName,
+                                                  qty = 1,
+
+                                                  productRate = @Model.ManageProductlist[0].TotalAmountIncludeTax,
+                                                  productImage = @Model.ManageProductlist[0].ProductImage
+                                              }, new { @class = "buynow1" })*@
+
+  <div class=" f-left">
+                                               
+                                            </div>
+
+                                             <div class=" f-left clearfix">
+                                            <div class=" f-left">
+                                                <input type="button" id="btnBuyNow" class="buynow1" value="Buy Now" />
+                                            </div>
+                                        </div>
+
+
+
+                                        </div>
+
+                                        @*<a href="#" class="button extra-small button-black" tabindex="-1">
+                                                <span class="text-uppercase">Buy now</span>
+                                            </a>*@
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single-product-info end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SHOP SECTION END -->
+
+</section>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+
+    $("img").click(function () {
+        var mainImage = $(this).attr('src');
+        $('#myimage').attr('src', mainImage);
+        $(this).attr('data-zoom-image', mainImage);
+        //$('#myresult').css('background-image', 'url(' + mainImage + ')');
+        //magnify("myimage", 3);
+
+        document.getElementById("divmgglass").style.backgroundImage = "url('" + mainImage + "')";
+        return false;
+    });
+
+    $(function () {
+        $("#btnAddToCart").click(function () {
+            var newUrl = '@Url.Action("Cart", "Shop")';
+           
+            $.ajax({
+                type: "Post",
+                url: "/Shop/AddToCart",
+
+                data: '{id:"' + $("#productId").val() + '",productname:"' + $("#productName").val() + '" ,qty:"' + $("#qtybutton").val() + '",productRate:"' + $("#totalAmount").val() + '",productImage:"' + $("#productImage").val() + '" }',
+
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+
+                    window.location.href = result.redirectUrl;
+                },
+                failure: function (response) {
+                    console.log("h", response);
+                    window.location.href = newUrl;
+                },
+                error: function (response) {
+                    console.log(response);
+                    window.location.href = newUrl;
+                }
+            });
+        });
+
+
+         $("#btnBuyNow").click(function () {
+            var newUrl = '@Url.Action("CheckOut", "Shop")';
+            $.ajax({
+                type: "Post",
+                url: "/Shop/BuyNow_Details",
+
+                data: '{id:"' + $("#productId").val() + '",productname:"' + $("#productName").val() + '" ,qty:"' + $("#qtybutton").val() + '",productRate:"' + $("#totalAmount").val() + '",productImage:"' + $("#productImage").val() + '" }',
+
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+
+                window.location.href = result.redirectUrl;
+                },
+                failure: function (result) {
+                    window.location.href = result.redirectUrl;
+                   
+                },
+                error: function (result) {
+                    console.log(response);
+                     window.location.href = newUrl;
+//                    window.location.href = result.redirectUrl;
+                   
+                }
+            });
+        });
+
+
+
+
+
+
+
+        $("#pincode").focusout(function () {
+            var Pincode = $("#pincode").val();
+            if (Pincode != '') {
+
+                $.ajax({
+
+                    type: "GET",
+                    url: "/Shop/GetPrductavailabilityBypincode",
+                    dataType: "json",
+                    data: { 'Pincode': Pincode },
+
+                    success: function (data) {
+                        var jsonData = JSON.parse(data);
+                        if (jsonData.Status == 1) {
+
+                            $("#Isavailable").text("Available");
+                            $("#pincode").val("");
+
+                        }
+                        if (jsonData.Status == -1) {
+                            $("#pincode").val("");
+                            $("#Isavailable").text("Not Available");
+
+                        }
+
+                    },
+                    failure: function (msg) {
+                        console.log(msg);
+
+                    },
+                });
+            }
+            else {
+                $('#emailError').html("");
+            }
+        });
+    });
+</script>

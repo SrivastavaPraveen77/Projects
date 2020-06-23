@@ -1,0 +1,117 @@
+﻿@model MGAChargerEcommerce.Models.ShipingDetail
+@{
+    ViewBag.Title = "UpdateShipingDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">Shiping Details</div>
+            <div class="panel-body">
+                <div id="msg"></div>
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success" role="alert" id="datamasg">@TempData["SuccessMessage"].ToString()</div>
+                }
+                else if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="alert alert-danger" role="alert" id="datamasg1">@TempData["ErrorMessage"].ToString()</div>
+                }
+
+                <div class="col-md-6 cat-form">
+                    @using (Html.BeginForm("UpdateShipingDetail", "Admin", FormMethod.Post, new { Id = "form1" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        
+                         <div class="editor-label">
+                        @Html.HiddenFor(model => model.ShippingId)
+                    </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.SourceName)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.SourceName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.SourceName)
+                        </div>
+
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.StateName, new { @class = "col-sm-3 control-label" })
+                        </div>
+
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => model.StateName, ViewBag.stateListList as List<SelectListItem>, "--Select State--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.StateName)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.CourierName)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.CourierName, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.CourierName) })
+                            @Html.ValidationMessageFor(model => model.CourierName)
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Product, new { @class = "col-sm-3 control-label" })
+                        </div>
+
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => model.Product, ViewBag.productList as List<SelectListItem>, "--Select Product--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Product)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.CourierCategory, new { @class = "col-sm-3 control-label" })
+                        </div>
+
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => model.CourierCategory, ViewBag.couriercategoryList as List<SelectListItem>, "--Select Courier Category--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CourierCategory)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                        </div>
+
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.CourierCharge)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.CourierCharge, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.CourierCharge) })
+                            @Html.ValidationMessageFor(model => model.CourierCharge)
+                        </div>
+
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.ProductDimensioon)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.ProductDimensioon, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.ProductDimensioon) })
+                            @Html.ValidationMessageFor(model => model.ProductDimensioon)
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.ProdctWeight)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.ProdctWeight, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.ProdctWeight) })
+                            @Html.ValidationMessageFor(model => model.ProdctWeight)
+                        </div>
+
+                        <div class="editor-field">
+                            <input type="submit" value="Submit" class="btn btn-sm btn-primary resbtn" />
+
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    $("#SourceName").val("LUCKNOW(Source)");
+    $("#SourceName").disabled();
+</script>

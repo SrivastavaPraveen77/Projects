@@ -1,0 +1,96 @@
+﻿@model MGAChargerEcommerce.Models.LoginModel
+@{
+	/**/
+
+	ViewBag.Title = "Home Page";
+	Layout = null;
+}
+
+
+<html>
+<head>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="shadow-box">
+			@using (Html.BeginForm("Login", "Account", FormMethod.Post, new { enctype = "miltipart/form-data" }))
+			{
+
+				<div class="" id="content">
+					<div class="">
+						<div class="">
+							<div class="form-horizontal login-main clearfix">
+
+								<div class="text-center">
+									<h3 style="font-size: 24px !important;">Login</h3>
+								</div>
+
+								<div class="form-group">
+									@if (TempData["SuccessMessage"] != null)
+									{
+										<div class="alert alert-success" style="margin: 10px 0">
+											@TempData["SuccessMessage"]
+										</div>
+									}
+									@if (TempData["ErrorMessage"] != null)
+									{
+										<div class="alert alert-danger" style="margin: 10px 0">
+											@TempData["ErrorMessage"]
+										</div>
+									}
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-3 control-label">Username</label>
+									<div class="col-sm-6">
+										@Html.TextBoxFor(m => m.UserName, null, new { @class = "form-control", @placeholder = "Username" })
+										@Html.ValidationMessageFor(m => m.UserName, null, new { @class = "error" })
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-3 control-label">Password</label>
+									<div class="col-sm-6">
+										@Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+										@Html.ValidationMessageFor(m => m.Password, null, new { @class = "error" })
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-3"></div>
+									<div class="col-sm-6">
+										<button type="submit" class="btn btn-primary btn-login">Login</button>
+										<a href="/Account/ForgetPassword">Forgot Password</a>
+
+									</div>
+								</div>
+
+
+								@*<div class="form-gorup">
+										<div class="col-sm-3"></div>
+										<div class="col-sm-6">
+											<div class="socialicns" style="margin-top:-6px !important;">
+												<ul>
+
+													@Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+												</ul>
+											</div>
+
+										</div>
+									</div>*@
+
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+
+		</div>
+	</div>
+
+
+
+</body>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+</html>

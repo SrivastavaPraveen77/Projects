@@ -1,0 +1,140 @@
+﻿@model MGAChargerEcommerce.Models.ManageProduct
+@{
+	ViewBag.Title = @Model.ManageProductlist[0].ProductName;
+	Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="breadcrumbs-section plr-200 mb-80">
+	<div class="breadcrumbs overlay-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="breadcrumbs-inner">
+						<input type="hidden" id="ProductName" />
+						<h1 class="breadcrumbs-title">@Model.ManageProductlist[0].ProductName</h1>
+						<ul class="breadcrumb-list">
+							<li><a href="/Home/Index">Home</a></li>
+							<li><a href="/Home/Shop">Shop</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section id="page-content" class="page-wrapper">
+
+	<!-- SHOP SECTION START -->
+	<div class="shop-section mb-80">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<!-- single-product-area start -->
+					<div class="single-product-area mb-80">
+						<div class="row">
+							<!-- imgs-zoom-area start -->
+							<div class="col-md-5 col-sm-5 col-xs-12">
+
+								<div class="imgs-zoom-area">
+									<input type="hidden" id="productImage" />
+									<img src="@(!String.IsNullOrEmpty(Model.ManageProductlist[0].ProductImage) ? "/Content/ProductImage/"+Model.ManageProductlist[0].ProductImage : "/Content/webHome/images/noimage.png")" />
+								</div>
+							</div>
+							<!-- imgs-zoom-area end -->
+							<!-- single-product-info start -->
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<div class="single-product-info">
+									@*<h3 class="text-black-1">Dummy Product Name </h3>
+										<h6 class="brand-name-2">brand name</h6>*@
+									<!-- hr -->
+									<!-- single-product-tab -->
+									<div class="single-product-tab">
+										<ul class="reviews-tab mb-20">
+											<li class="active"><a href="#description" data-toggle="tab">description</a></li>
+											<li><a href="#reviews" data-toggle="tab">RETURN POLICY</a></li>
+										</ul>
+										<div class="tab-content">
+											<div role="tabpanel" class="tab-pane active" id="description">
+												<p>
+													@Html.Raw(@Model.ManageProductlist[0].ProductDescription)
+												</p>
+											</div>
+											<div role="tabpanel" class="tab-pane" id="reviews">
+												<p class="ul_desc">15 Days Return/Replacement Policy - Product return or replacement is accepted by MGA Charger within 15 days of product delivery only in case a wrong or damaged product has been delivered. Cancellation allowed.</p>
+											</div>
+
+										</div>
+									</div>
+									<!--  hr -->
+									<hr>
+									<div class="plus-minus-pro-action clearfix">
+										<div class="sin-plus-minus f-left clearfix">
+											<p class="color-title f-left">Qty</p>
+											<div class="cart-plus-minus f-left">
+
+												<input type="text" value="1" name="qtybutton" class="cart-plus-minus-box">
+
+											</div>
+										</div>
+										<div class="sin-pro-action f-right">
+										</div>
+									</div>
+									<hr>
+									<h3 class="pro-price">Unit Price: ₹ @Model.ManageProductlist[0].ProductRate</h3>
+									<hr>
+									<h3 class="pro-price">Tax: ₹ @Model.ManageProductlist[0].TotalTax</h3>
+									<hr>
+									<h3 class="pro-price">Total Amount: ₹ @Model.ManageProductlist[0].TotalAmountIncludeTax</h3>
+									<hr>
+
+									<div>
+										@*@Html.ActionLink("Add to cart", "AddToCart", "Shop", new { id = Model.ManageProductlist[0].ProductId,
+											  productname = Model.ManageProductlist[0].ProductName, qty =6, productRate = Model.ManageProductlist[0].ProductRate,
+											  productImage = Model.ManageProductlist[0].ProductImage
+											},  new { @class = "cartButton1" })*@
+										<input type="button" id="btnAddToCart" class="cartButton1" value="Add To Cart" />
+
+										@*<a href="#" class="button extra-small button-black" tabindex="-1">
+												<span class="text-uppercase">Buy now</span>
+											</a>*@
+									</div>
+								</div>
+							</div>
+							<!-- single-product-info end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SHOP SECTION END -->
+
+</section>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $(function () {
+        $("#btnAddToCart").click(function () {
+            var newUrl = '@Url.Action("Cart", "Shop")';
+            $("#ProductName").val("@Model.ManageProductlist[0].ProductName");
+            $("#productImage").val("@Model.ManageProductlist[0].ProductImage");
+            $.ajax({
+                type: "POST",
+                url: "/Shop/AddToCart",
+
+                data: '{id:"' + @Model.ManageProductlist[0].ProductId + '",productname:"' + $("#ProductName").val() + '" ,qty:"' + $(".cart-plus-minus-box").val() + '",productRate:"' +@Model.ManageProductlist[0].ProductRate +'",productImage:"' + $("#productImage").val() + '" }',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+
+                    window.location.href = result.redirectUrl;
+                },
+                failure: function (response) {
+                    window.location.href = newUrl;
+                },
+                error: function (response) {
+                    window.location.href = newUrl;
+                }
+            });
+        });
+    });
+</script>

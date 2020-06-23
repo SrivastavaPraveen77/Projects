@@ -1,0 +1,102 @@
+﻿@model MGAChargerEcommerce.Models.ManagePrestigiousCustomer
+@{
+    ViewBag.Title = "PrestigiousCustomer";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">Media Room</div>
+            <div class="panel-body">
+                <div id="msg"></div>
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success" role="alert" id="datamasg">@TempData["Success"].ToString()</div>
+                }
+                else if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger" role="alert" id="datamasg1">@TempData["Error"].ToString()</div>
+                }
+
+                <div class="col-md-6 cat-form">
+                    @using (Html.BeginForm("PrestigiousCustomer", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", Id = "form1" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.prestigiousCustomer.EventsName)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.prestigiousCustomer.EventsName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.prestigiousCustomer.EventsName)
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.prestigiousCustomer.URL)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.prestigiousCustomer.URL, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.prestigiousCustomer.URL)
+                        </div>
+                        
+
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.prestigiousCustomer.Image, new { @class = "col-sm-3 control-label" })
+                        </div>
+
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.prestigiousCustomer.Image, new { @type = "file", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.prestigiousCustomer.Image)
+                            <span id="imgextensionError" style="color: #e80c4d"></span>
+                        </div>
+
+                        <div class="editor-field">
+                            <input type="submit" value="Create" class="btn btn-sm btn-primary resbtn" />
+
+                        </div>
+                    }
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    @if (Model.prestigiousCustomerList.Count > 0 && Model.prestigiousCustomerList != null)
+    {
+        int SrNo = 0;
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Event Name</th>
+                        <th>Image</th>
+                        <th>Url</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model.prestigiousCustomerList)
+                    {
+                        SrNo++;
+                        <tr id="row_@item.ID">
+                            <td>@SrNo</td>
+                            <td>@item.EventsName</td>
+                            
+                             <td><img src="@item.Image" height="110px" width="80px" onmouseover="return ZoomImage(this);" onmouseout="return ZoomOutImage(this);" /></td>
+                            <td>@item.URL</td>
+                            <td>
+                                <a href="/Admin/DeletePrestigiousCustomer/@item.ID" style="cursor:pointer"><i class="fa fa-trash-o fa-fw"></i></a>
+                            </td>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

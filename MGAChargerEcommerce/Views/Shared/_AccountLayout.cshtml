@@ -1,0 +1,554 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head runat="server">
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="~/Content/webHome/images/favicon.png" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/bootstrap.min.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/nivo-slider.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/core.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/shortcodes.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/style.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/responsive.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/custom.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/webHome/css/style-customizer.css")" />
+
+	<link href="#" data-style="styles" rel="stylesheet" />
+
+	<script src="@Url.Content("~/Scripts/webHome/modernizr-2.8.3.min.js")"></script>
+
+
+</head>
+<body class="wide-layout">
+
+	<!-- Body main wrapper start -->
+	<div class="wrapper">
+
+		<!-- START HEADER AREA -->
+		<header class="header-area header-wrapper">
+			<!-- header-top-bar -->
+			<div class="header-top-bar plr-185">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-6 hidden-xs">
+							<div class="call-us">
+								<p class="mb-0 roboto">+91-74993 94690</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<div class="top-link clearfix">
+								<ul class="link f-right">
+									<li>
+										<a href="my-account.html">
+											<i class="zmdi zmdi-account"></i>
+											My Account
+										</a>
+									</li>
+									<li>
+										<a href="login.html">
+											<i class="zmdi zmdi-lock"></i>
+											Login
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header-middle-area -->
+			<div id="sticky-header" class="header-middle-area plr-185" style="background-color: #f3f5f6">
+				<div class="container-fluid">
+					<div class="full-width-mega-dropdown">
+						<div class="row">
+							<!-- logo -->
+							<div class="col-md-2 col-sm-6 col-xs-12">
+								<div class="logo">
+									<a href="index.html">
+										@*<img src="~/Content/webHome/images/logo.jpg" alt="main logo">*@
+										<h1>MGA CHARGER</h1>
+									</a>
+								</div>
+							</div>
+							<!-- primary-menu -->
+							<div class="col-md-8 hidden-sm hidden-xs">
+								<nav id="primary-menu">
+									<ul class="main-menu text-center">
+										<li>
+											<a href="/Home/Index" style="font-size:15px">Home</a>
+										</li>
+										<li>
+											<a href="/Home/About" style="font-size:15px">About us</a>
+										</li>
+										<li class="mega-parent">
+											<a href="" style="font-size:15px">Products</a>
+											<div class="mega-menu-area clearfix">
+												<div class="mega-menu-link f-left">
+													<ul class="single-mega-item">
+														<li class="menu-title"><b>Industrial Battery Charger</b></li>
+														<li>
+															<a href="#">ECO-1 Multi Battery Charger</a>
+														</li>
+														<li>
+															<a href="#">ECO-6 Mini Battery Charger</a>
+														</li>
+														<li>
+															<a href="#">ECO-9 Mini Battery Charger</a>
+														</li>
+														<li>
+															<a href="#">ECO-9 MCB Battery Charger</a>
+														</li>
+														<li>
+															<a href="#">ECO-15 MCB Battery Charger</a>
+														</li>
+														<li>
+															<a href="#">BIG BOSS TITANIUM BATTERY CHARGER</a>
+														</li>
+													</ul>
+													<ul class="single-mega-item">
+														<li class="menu-title"><b>Home Used Battery Charger</b></li>
+														<li>
+															<a href="">ACTIVE 6/12 Battery Charger</a>
+														</li>
+														<li>
+															<a href="">ACTIVE-12 Battery Charger</a>
+														</li>
+														<li>
+															<a href="">ACTIVE-24 Battery Charger</a>
+														</li>
+														<li>
+															<a href="">ACTIVE-48 Battery Charger</a>
+														</li>
+														<li>
+															<a href="">SMF-1 Battery Charger</a>
+														</li>
+														<li>
+															<a href="">SMF-6 Battery Charger</a>
+														</li>
+													</ul>
+													<ul class="single-mega-item">
+														<li class="menu-title"><b>Solar Unit</b></li>
+														<li>
+															<a href="">Solar Charge Controller 96 Volt & 45 Amp</a>
+														</li>
+														<li>
+															<a href="">Solar Charge Controller 12 Volt & 24 Volt 45 Amp</a>
+														</li>
+														<li>
+															<a href="">Solar Charge Controller 48 Volt 60 Amp</a>
+														</li>
+														<li>
+															<a href="">Solar Charge Controller 48 Volt 45 Amp</a>
+														</li>
+														<li>
+															<a href="">Solar Charge Controller 48 Volt & 30 Amp</a>
+														</li>
+														<li>
+															<a href="">Solar Charge Controller 36 Volt & 30 Amp</a>
+														</li>
+													</ul>
+												</div>
+												<div class="mega-menu-photo f-left">
+													<a href="#">
+														<img src="~/Content/webHome/images/mega_menu_product.jpg" alt="mega menu image" />
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<a href="/Home/Shop" style="font-size:15px">Shop</a>
+										</li>
+										<li>
+											<a href="/Home/Contact" style="font-size:15px">Contact</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<!-- header-search & total-cart -->
+							<div class="col-md-2 col-sm-6 col-xs-12">
+								<div class="search-top-cart  f-right">
+									<!-- total-cart -->
+									<div class="total-cart f-left">
+										<div class="total-cart-in">
+											<div class="cart-toggler">
+												<a href="#">
+													<span class="cart-quantity">02</span><br>
+													<span class="cart-icon">
+														<i class="zmdi zmdi-shopping-cart-plus"></i>
+													</span>
+												</a>
+											</div>
+											<ul>
+												<li>
+													<div class="top-cart-inner your-cart">
+														<h5 class="text-capitalize">Your Cart</h5>
+													</div>
+												</li>
+												<li>
+													<div class="total-cart-pro">
+														<!-- single-cart -->
+														<div class="single-cart clearfix">
+															<div class="cart-img f-left">
+																<a href="#">
+																	<img src="~/Content/webHome/images/cart1.jpg" alt="Cart Product" />
+																</a>
+																<div class="del-icon">
+																	<a href="#">
+																		<i class="zmdi zmdi-close"></i>
+																	</a>
+																</div>
+															</div>
+															<div class="cart-info f-left">
+																<h6 class="text-capitalize">
+																	<a href="#">Dummy Product Name</a>
+																</h6>
+																<p>
+																	<span>Brand <strong>:</strong></span>Brand Name
+																</p>
+																<p>
+																	<span>Model <strong>:</strong></span>Grand s2
+																</p>
+																<p>
+																	<span>Color <strong>:</strong></span>Black, White
+																</p>
+															</div>
+														</div>
+														<!-- single-cart -->
+														<div class="single-cart clearfix">
+															<div class="cart-img f-left">
+																<a href="#">
+																	<img src="~/Content/webHome/images/cart1.jpg" alt="Cart Product" />
+																</a>
+																<div class="del-icon">
+																	<a href="#">
+																		<i class="zmdi zmdi-close"></i>
+																	</a>
+																</div>
+															</div>
+															<div class="cart-info f-left">
+																<h6 class="text-capitalize">
+																	<a href="#">Dummy Product Name</a>
+																</h6>
+																<p>
+																	<span>Brand <strong>:</strong></span>Brand Name
+																</p>
+																<p>
+																	<span>Model <strong>:</strong></span>Grand s2
+																</p>
+																<p>
+																	<span>Color <strong>:</strong></span>Black, White
+																</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="top-cart-inner subtotal">
+														<h4 class="text-uppercase g-font-2">
+															Total  =
+															<span>$ 500.00</span>
+														</h4>
+													</div>
+												</li>
+												<li>
+													<div class="top-cart-inner view-cart">
+														<h4 class="text-uppercase">
+															<a href="#">View cart</a>
+														</h4>
+													</div>
+												</li>
+												<li>
+													<div class="top-cart-inner check-out">
+														<h4 class="text-uppercase">
+															<a href="#">Check out</a>
+														</h4>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER AREA -->
+		<!-- START MOBILE MENU AREA -->
+		<div class="mobile-menu-area hidden-lg hidden-md">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="mobile-menu">
+							<nav id="dropdown">
+
+								<ul>
+									<li>
+										<a href="/Home/Index" style="font-size:15px">Home</a>
+									</li>
+									<li>
+										<a href="/Home/About" style="font-size:15px">About us</a>
+									</li>
+									<li>
+										<a href="" style="font-size:15px">Products</a>
+										<ul>
+											<li>Industrial Battery Charger</li>
+											<li>
+												<a href="#">ECO-1 Multi Battery Charger</a>
+											</li>
+											<li>
+												<a href="#">ECO-6 Mini Battery Charger</a>
+											</li>
+											<li>
+												<a href="#">ECO-9 Mini Battery Charger</a>
+											</li>
+											<li>
+												<a href="#">ECO-9 MCB Battery Charger</a>
+											</li>
+											<li>
+												<a href="#">ECO-15 MCB Battery Charger</a>
+											</li>
+											<li>
+												<a href="#">BIG BOSS TITANIUM BATTERY CHARGER</a>
+											</li>
+										</ul>
+										<ul>
+											<li>Home Used Battery Charger</li>
+											<li>
+												<a href="">ACTIVE 6/12 Battery Charger</a>
+											</li>
+											<li>
+												<a href="">ACTIVE-12 Battery Charger</a>
+											</li>
+											<li>
+												<a href="">ACTIVE-24 Battery Charger</a>
+											</li>
+											<li>
+												<a href="">ACTIVE-48 Battery Charger</a>
+											</li>
+											<li>
+												<a href="">SMF-1 Battery Charger</a>
+											</li>
+											<li>
+												<a href="">SMF-6 Battery Charger</a>
+											</li>
+										</ul>
+										<ul>
+											<li>Solar Unit</li>
+											<li>
+												<a href="">Solar Charge Controller 96 Volt & 45 Amp</a>
+											</li>
+											<li>
+												<a href="">Solar Charge Controller 12 Volt & 24 Volt 45 Amp</a>
+											</li>
+											<li>
+												<a href="">Solar Charge Controller 48 Volt 60 Amp</a>
+											</li>
+											<li>
+												<a href="">Solar Charge Controller 48 Volt 45 Amp</a>
+											</li>
+											<li>
+												<a href="">Solar Charge Controller 48 Volt & 30 Amp</a>
+											</li>
+											<li>
+												<a href="">Solar Charge Controller 36 Volt & 30 Amp</a>
+											</li>
+										</ul>
+
+									</li>
+									<li>
+										<a href="/Home/Shop" style="font-size:15px">Shop</a>
+									</li>
+									<li>
+										<a href="/Home/Contact" style="font-size:15px">Contact</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END MOBILE MENU AREA -->
+		@RenderBody()
+		<!-- START FOOTER AREA -->
+		<footer id="footer" class="footer-area">
+			<div class="footer-top">
+				<div class="container-fluid">
+					<div class="plr-185">
+						<div class="footer-top-inner gray-bg">
+							<div class="row">
+								<div class="col-lg-4 col-md-5 col-sm-4">
+									<div class="single-footer footer-about">
+										<div class="footer-logo">
+											<img src="img/logo/logo.png" alt="">
+										</div>
+										<div class="footer-brief">
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the subas industry's standard dummy text ever since the 1500s,</p>
+											<p>When an unknown printer took a galley of type and If you are going to use a passage of Lorem Ipsum scrambled it to make.</p>
+										</div>
+										<ul class="footer-social">
+											<li>
+												<a class="facebook" href="" title="Facebook"><i class="zmdi zmdi-facebook"></i></a>
+											</li>
+											<li>
+												<a class="google-plus" href="" title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a>
+											</li>
+											<li>
+												<a class="twitter" href="" title="Twitter"><i class="zmdi zmdi-twitter"></i></a>
+											</li>
+											<li>
+												<a class="rss" href="" title="RSS"><i class="zmdi zmdi-rss"></i></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 hidden-md hidden-sm">
+									<div class="single-footer">
+										<h4 class="footer-title border-left">Shipping</h4>
+										<ul class="footer-menu">
+											<li>
+												<a href="#"><i class="zmdi zmdi-circle"></i><span>New Products</span></a>
+											</li>
+											<li>
+												<a href="#"><i class="zmdi zmdi-circle"></i><span>Discount Products</span></a>
+											</li>
+											<li>
+												<a href="#"><i class="zmdi zmdi-circle"></i><span>Best Sell Products</span></a>
+											</li>
+											<li>
+												<a href="#"><i class="zmdi zmdi-circle"></i><span>Popular Products</span></a>
+											</li>
+											<li>
+												<a href="#"><i class="zmdi zmdi-circle"></i><span>Manufactirers</span></a>
+											</li>
+											<li>
+												<a href="#"><i class="zmdi zmdi-circle"></i><span>Suppliers</span></a>
+											</li>
+											<li>
+												<a href="#"><i class="zmdi zmdi-circle"></i><span>Special Products</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-2 col-md-3 col-sm-4">
+									<div class="single-footer">
+										<h4 class="footer-title border-left">my account</h4>
+										<ul class="footer-menu">
+											<li>
+												<a href="my-account.html"><i class="zmdi zmdi-circle"></i><span>My Account</span></a>
+											</li>
+											<li>
+												<a href="wishlist.html"><i class="zmdi zmdi-circle"></i><span>My Wishlist</span></a>
+											</li>
+											<li>
+												<a href="cart.html"><i class="zmdi zmdi-circle"></i><span>My Cart</span></a>
+											</li>
+											<li>
+												<a href="login.html"><i class="zmdi zmdi-circle"></i><span>Sign In</span></a>
+											</li>
+											<li>
+												<a href="login.html"><i class="zmdi zmdi-circle"></i><span>Registration</span></a>
+											</li>
+											<li>
+												<a href="checkout.html"><i class="zmdi zmdi-circle"></i><span>Check out</span></a>
+											</li>
+											<li>
+												<a href="order.html"><i class="zmdi zmdi-circle"></i><span>Oder Complete</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-4">
+									<div class="single-footer">
+										<h4 class="footer-title border-left">Get in touch</h4>
+										<div class="footer-message">
+											<form action="#">
+												<input type="text" name="name" placeholder="Your name here...">
+												<input type="text" name="email" placeholder="Your email here...">
+												<textarea class="height-80" name="message" placeholder="Your messege here..."></textarea>
+												<button class="submit-btn-1 mt-20 btn-hover-1" type="submit">submit message</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom black-bg">
+				<div class="container-fluid">
+					<div class="plr-185">
+						<div class="copyright">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<div class="copyright-text">
+										<p>&copy; <a href="#" target="_blank">MGA Charger</a> 2018. All Rights Reserved.</p>
+									</div>
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<ul class="footer-payment text-right">
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_1.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_2.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_3.jpg" alt="" /></a>
+										</li>
+										<li>
+											<a href="#"><img src="~/Content/webHome/images/payment_4.jpg" alt="" /></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END FOOTER AREA -->
+		<!-- Body main wrapper end -->
+		<!-- Placed JS at the end of the document so the pages load faster -->
+		<!-- jquery latest version -->
+	</div>
+	<script src="@Url.Content("~/Scripts/webHome/jquery-3.1.1.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/bootstrap.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/jquery.nivo.slider.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/plugins.js")"></script>
+	<script src="@Url.Content("~/Scripts/webHome/main.js")"></script>
+
+	@*<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;"><i class="zmdi zmdi-chevron-up"></i></a>*@
+</body>
+</html>
+
+
+@*https://devitems.com/html/subas-preview/
+
+		https://css-tricks.com/almanac/properties/l/list-style/
+		https://www.w3.org/Style/Examples/007/color-bullets.en.html
+
+
+		ActionLayer - base, Datalayer, db services, utility
+	Base, Db services, Utillity - nothing
+	Datalayer - base, dbServces
+	MainProject- ActionLayer, Base, Data layer, dbServices, Utility
+	Tests- MainProject
+
+	https://devitems.com/html/subas-preview/subas/index.html
+
+*@

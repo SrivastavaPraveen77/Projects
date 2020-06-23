@@ -1,0 +1,420 @@
+﻿@model MGAChargerEcommerce.Models.RegisterModel
+@{
+	ViewBag.Title = "Register";
+
+}
+<style>
+	.form-horizontal .control-label {
+		text-align: left;
+	}
+</style>
+
+<div class="contentclass" id="content">
+	<div class="">
+		<div class="border-main">
+
+			<div class="aboutbackground1 reg-form">
+				<h2>Sign Up</h2>
+
+				@using (Html.BeginForm("Register", "Account", new { }, FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off", onsubmit = "return StopPage();" }))
+				{
+					@Html.AntiForgeryToken()
+					@Html.ValidationSummary(true)
+					<div class="form-horizontal loginform">
+
+						@if (TempData["SuccessMessage"] != null)
+						{
+							<div class="alert alert-success">
+								<p style="word-wrap: break-word; line-height: 16px;">
+									@TempData["SuccessMessage"]
+								</p>
+
+							</div>
+						}
+
+						else if (TempData["ErrorMessage"] != null)
+						{
+							<div class="alert alert-danger">@TempData["ErrorMessage"] </div>
+						}
+
+						<div class="form-group" id="Firstname">
+							@Html.LabelFor(model => model.FirstName, new { @class = "col-sm-3 control-label formlabel", id = "lblfirstname" })
+							<div class="col-sm-6">
+								@Html.TextBoxFor(model => model.FirstName, new { @class = "form-control formtextbox", @placeholder = "First Name", id = "txtfirstname" })
+								@Html.ValidationMessageFor(model => model.FirstName)
+							</div>
+						</div>
+						<div class="form-group" id="lastname">
+							@Html.LabelFor(model => model.LastName, new { @class = "col-sm-3 control-label formlabel" })
+
+							<div class="col-sm-6">
+								@Html.TextBoxFor(model => model.LastName, new { @class = "form-control formtextbox", @placeholder = "Last Name", id = "txtlastname" })
+								@Html.ValidationMessageFor(model => model.LastName)
+							</div>
+						</div>
+					 
+						<div class="form-group">
+							@Html.LabelFor(model => model.Email, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-sm-6">
+								@Html.TextBoxFor(model => model.Email, new { @onblur = "checkEmailExists(this)", @class = "form-control formtextbox", placeholder = "you@example.com", id = "txtemail" })
+								<span id="emailError" style="color: #e80c4d;"></span>
+								<p class="Validate">@Html.ValidationMessageFor(model => model.Email)</p>
+							</div>
+						</div>
+						<div class="form-group">
+							@Html.LabelFor(model => model.Password, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-sm-6">
+								@Html.PasswordFor(model => model.Password, new { @class = "form-control formtextbox", id = "Password", placeholder = "Password" })
+								@Html.ValidationMessageFor(model => model.Password)
+							</div>
+						</div>
+						<div class="form-group">
+							@Html.LabelFor(model => model.ConfirmPassword, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-sm-6">
+								@Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control formtextbox", placeholder = "Confirm Password" })
+								@Html.ValidationMessageFor(model => model.ConfirmPassword)
+							</div>
+						</div>
+
+						<div class="form-group">
+							@Html.LabelFor(model => model.MobileNo, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-sm-6">
+								@Html.TextBoxFor(model => model.MobileNo, new { @onblur = "checkMobileNoExists(this)", @class = "form-control formtextbox numeric", placeholder = "Mobile Number" })
+								@Html.ValidationMessageFor(model => model.MobileNo)
+							</div>
+						</div>
+
+						<div class="form-group">
+							@Html.LabelFor(model => model.Address, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-sm-6">
+								@Html.TextAreaFor(model => model.Address, new { @class = "form-control formtextbox", placeholder = "Address" })
+								@Html.ValidationMessageFor(model => model.Address)
+							</div>
+						</div>
+
+
+						<div class="form-group">
+
+							@Html.LabelFor(m => m.State, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-md-6">
+								@Html.DropDownListFor(m => m.State, Model.statelist, "--Select State --", new { @class = "form-control", onChange = "CityBind();" })
+								@Html.ValidationMessageFor(m => m.State)
+
+							</div>
+						</div>
+						<div class="form-group">
+
+							@Html.LabelFor(m => m.City, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-md-6">
+								@Html.DropDownListFor(m => m.City, Model.citylist, "--Select City--", new { @class = "form-control" })
+								@Html.ValidationMessageFor(m => m.City)
+
+							</div>
+						</div>
+						<div class="form-group">
+
+							@Html.LabelFor(m => m.ZipCode, new { @class = "col-sm-3 control-label formlabel" })
+							<div class="col-md-6">
+								@Html.TextBoxFor(m => m.ZipCode, null, new { @class = "form-control", @placeholder = "ZipCode" })
+								@Html.ValidationMessageFor(m => m.ZipCode)
+							</div>
+						</div>
+
+						@*  <div class="form-group">
+							  <label class = "col-sm-4 control-label formlabel">Give Reference</label>
+								<div class="col-sm-8">
+									<input type="checkbox" id="mycheckbox" />                            </div>
+							</div>
+							  <div class="form-group" id="divreferal">
+								<label class = "col-sm-4 control-label formlabel">Referal Code</label>
+								<div class="col-sm-8">
+								 <input type="text" id="TxtReferalCode" class = "form-control formtextbox " onchange="checkreferalcode(this)" />
+									<span id="txtmessage" style="color:red;"></span>
+								</div>
+							</div>*@
+
+
+						@* <div class="form-group">
+								<h5>Already a member <a href="/Account/Login">Click here for login</a></h5>
+							</div>*@
+
+						<div class="form-group">
+							<div class="col-md-3"></div>
+							<div class="    col-sm-6">
+								<input type="hidden" id="hdnId" name="hdnId" value="" />
+								<button class="btn btn-primary btn-lg makeit" id="btnsubmit" type="submit" style="margin: 0;" onclick="RefValidate()">Register</button>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script type="text/javascript">
+    var specialKeys = new Array();
+    specialKeys.push(8); //Backspace
+    $(function () {
+        $(".numeric").bind("keypress", function (e) {
+            var keyCode = e.which ? e.which : e.keyCode
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+            return ret;
+        });
+        $(".numeric").bind("paste", function (e) {
+            return false;
+        });
+        $(".numeric").bind("drop", function (e) {
+            return false;
+        });
+        $(".numeric").bind("drag", function (e) {
+            return false;
+        });
+    });
+    $(document).ready(function () {
+
+        $('#txtemail').val('');
+        $('#Password').val('');
+        //$('#txtemail').clear();
+        $('#divreferal').css("display", "none");
+        $('#mycheckbox').change(function () {
+
+            if ($('#mycheckbox').is(":checked")) {
+
+                $('#divreferal').show();
+            }
+            else {
+                $('#divreferal').css("display", "none");
+                $('#TxtReferalCode').val('');
+                $('#txtmessage').text('');
+                $('#btnsubmit').prop('disabled', false);
+
+            }
+
+        });
+
+        $('#Firstname').hide();
+        $('#lastname').hide();
+
+        var loginemail = '@TempData["Email"]';
+        if (loginemail != null) {
+
+
+            $('#Firstname').show();
+            $('#lastname').show();
+
+            $('#txtfirstname').val('@TempData["Firstname"]');
+            $('#txtlastname').val('@TempData["LastName"]');
+            $('#txtemail').val(loginemail);
+            $('#CustomerTypeid').val('1');
+
+        }
+        //alert(loginemail);
+
+    });
+
+    $('#CustomerTypeid').change(function () {
+        var id = $(this).val();
+        var nameing = $('#CustomerTypeid option:selected').text();
+
+        if (id == "") {
+            $('#Firstname').hide();
+            $('#lastname').hide();
+        }
+        if (id == "1") {
+            $('#Firstname').fadeIn();
+
+            $('#lastname').fadeIn();
+            $('#lblfirstname').html('First Name');
+            $("#txtfirstname").attr("placeholder", "First Name");
+        }
+
+        if (id == "2") {
+            $('#Firstname').show();
+            $('#lastname').hide();
+            $('#lblfirstname').html(nameing + " Name");
+            var placename = nameing + " Name";
+            $("#txtfirstname").attr("placeholder", nameing + " Name");
+        }
+
+        if (id == "3") {
+            $('#Firstname').show();
+            $('#lastname').hide();
+            $('#lblfirstname').html(nameing + " Name");
+            $("#txtfirstname").attr("placeholder", nameing + " Name");
+        }
+
+        if (id == "4") {
+            $('#Firstname').show();
+            $('#lastname').hide();
+            $('#lblfirstname').html(nameing + " Name");
+            $("#txtfirstname").attr("placeholder", nameing + " Name");
+        }
+        if (id == "5") {
+            $('#Firstname').show();
+            $('#lastname').hide();
+            $('#lblfirstname').html(nameing + " Name");
+            $("#txtfirstname").attr("placeholder", nameing + " Name");
+        }
+    });
+</script>
+
+<script>
+	function checkEmailExists(obj) {
+		var email = obj.value;
+		if (email != '') {
+
+			$.ajax({
+
+				type: "POST",
+				url: "/Account/checkValidation",
+				dataType: "json",
+				data: { 'email': email },
+
+				success: function (data) {
+					var jsonData = JSON.parse(data);
+					if (jsonData.Status == 1) {
+						$('#emailError').html("Email Already Exists.");
+						$('#Submit').prop('disabled', true);
+
+					}
+					if (jsonData.Status == 0) {
+
+						$('#Submit').prop('disabled', false);
+						$('#emailError').html("");
+
+					}
+					if (jsonData.Status == -1) {
+
+						$('#emailError').html("Error Occured.");
+
+					}
+
+				},
+				failure: function (msg) {
+					console.log(msg);
+
+				},
+			});
+		}
+		else {
+			$('#emailError').html("");
+		}
+	}
+
+	function checkMobileNoExists(obj) {
+		var MobileNo = obj.value;
+		$.ajax({
+			type: "POST",
+			url: "/Account/checkMobileValidation",
+			dataType: "json",
+			data: { 'MobileNo': MobileNo },
+			success: function (msg) {
+				console.log(msg);
+				if (msg) {
+
+					document.getElementById('MobileError').innerHTML = msg;
+					$('#Submit').attr('disabled', 'disabled');
+					//$('#EmailID ~ span:first').html = '<span for="EmailID" generated="true" class="">' + msg + '</span>';
+
+				}
+				else {
+					document.getElementById('MobileError').innerHTML = "";
+					$('#Submit').removeAttr('disabled');
+				}
+			},
+			failure: function (msg) {
+				console.log(msg);
+
+			},
+		});
+	}
+
+	function RefValidate() {
+		$('form').submit(function (e) {
+			var textbox = $('#TxtReferalCode').val();
+			if ($('#mycheckbox').is(":checked") && textbox == '') {
+				$('#txtmessage').text('Please Enter Referal Code.');
+				e.preventDefault();
+
+			}
+		});
+	}
+	function checkreferalcode(caller) {
+
+		// alert($(caller).val());
+
+		$.ajax({
+			type: "POST",
+			url: "/Account/CheckRefCode",
+			data: { 'RefCode': $(caller).val() },
+			//dataType: "json",
+			success: function (data) {
+
+				var jsondata = JSON.parse(data)
+				if (jsondata.Status <= 0) {
+					$('#txtmessage').text('This Referal Code does not exists.');
+					$('#btnsubmit').prop('disabled', true);
+					$('#hdnId').val('0');
+					// alert(jsondata.Status);
+
+				}
+				else {
+					$('#txtmessage').text('');
+					$('#btnsubmit').prop('disabled', false);
+					$('#hdnId').val(jsondata.Status);
+					// alert(jsondata.Status);
+				}
+
+
+			},
+			error: function () {
+				alert('Error Occured');
+			},
+			Complete: function () { }
+
+		});
+	}
+
+
+
+	function CityBind() {
+		var StateID = $('#State').val();
+		if (StateID != "") {
+			$.ajax({
+				type: "POST",
+				url: "/Home/CityBindByState",
+				dataType: "json",
+				async: false,
+				timeout: 3000,
+				success: function (msg) {
+					console.log(msg);
+					if (msg) {
+						//var options = "<option value='0'>Select</option>";
+						var options = "";
+						$.each(msg.citylist, function (key, value) {
+							console.log(value.Id);
+							options += "<option value=" + value.Value + ">" + value.Text + "</option>";
+						});
+						$('#City').html(options);
+					}
+					else {
+
+					}
+				},
+				failure: function (msg) {
+					console.log(msg);
+
+				},
+				data: { 'StateID': StateID },
+			});
+		} else {
+			$('#City').html("<option value>Select</option>");
+		}
+	}
+
+</script>
+
+

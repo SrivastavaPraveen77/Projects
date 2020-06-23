@@ -1,0 +1,199 @@
+﻿@model MGAChargerEcommerce.Models.MailModel
+@{
+	ViewBag.Title = "Contact";
+	Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="breadcrumbs-section plr-200 mb-80">
+	<div class="breadcrumbs overlay-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="breadcrumbs-inner">
+						<h1 class="breadcrumbs-title">Contact</h1>
+						<ul class="breadcrumb-list">
+							<li><a href="/Home/Index">Home</a></li>
+							<li>Contact</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<section id="page-content" class="page-wrapper">
+
+	<!-- ADDRESS SECTION START -->
+	<div class="address-section mb-80">
+		<div class="container">
+			<div class="row">
+
+
+                @{
+                    MGA.Base.ActionResult actionResult = new MGA.Base.ActionResult();
+                    MGA.ActionLayer.Home.HomeAL homeAction = new MGA.ActionLayer.Home.HomeAL();
+
+                    MGAChargerEcommerce.Models.ContactUs model = new MGAChargerEcommerce.Models.ContactUs();
+                    model.ID = 1;
+                    actionResult = homeAction.getContactUs();
+                    if (actionResult.dtResult.Rows.Count > 0)
+                    {
+                       
+                         
+				<div class="col-sm-4 col-xs-12">
+					<div class="contact-address box-shadow">
+                        
+						<i class="zmdi zmdi-pin"></i>
+						@*<h6>
+							34 A, Near Ravindra Palli, Faizabad Road, Near Shivji Ka Mandir, Rabindra Palli Colony,
+						</h6>
+						<h6>Lucknow-226016, Uttar Pradesh, India</h6>*@
+                        <h6>
+                            <b>Address</b><br /></h6>
+    <h6>
+
+        @Html.Raw(actionResult.dtResult.Rows[0]["Address"].ToString())
+    </h6>
+
+
+
+</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class="contact-address box-shadow">
+						<i class="zmdi zmdi-phone"></i>
+						@*<h6>08048620190</h6>
+						<h6>7499394690</h6>*@
+                        <h6>
+                            <b> Contact</b><br /></h6>
+    <table>
+        <tr>
+            <td>Corporate Number</td>
+            <td></td>
+
+            <td><h6>@actionResult.dtResult.Rows[0]["SalesSupportNumber"].ToString().Split(',')[0]</h6></td>
+        </tr>
+        <tr>
+            <td>EastZone</td>
+            <td></td>
+            <td><h6>@actionResult.dtResult.Rows[0]["SalesSupportNumber"].ToString().Split(',')[1]</h6></td>
+        </tr>
+        <tr>
+            <td>West Zone</td>
+            <td></td>
+            <td><h6>@actionResult.dtResult.Rows[0]["SalesSupportNumber"].ToString().Split(',')[2]</h6></td>
+        </tr>
+        <tr>
+            <td>North Zone</td>
+            <td></td>
+            <td><h6>@actionResult.dtResult.Rows[0]["SalesSupportNumber"].ToString().Split(',')[3]</h6></td>
+        </tr>
+        <tr>
+            <td>South Zone</td>
+            <td></td>
+            <td><h6>@actionResult.dtResult.Rows[0]["SalesSupportNumber"].ToString().Split(',')[4]</h6></td>
+        </tr>
+
+    </table>
+
+
+</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class="contact-address box-shadow">
+						<i class="zmdi zmdi-email"></i>
+						@*<h6>salesmgacharger@gmail.com</h6>
+						<h6>customerscare.mga@gmail.com</h6>*@
+                        <h6>
+                            <b> Email Id</b><br /></h6>
+    <h6>@actionResult.dtResult.Rows[0]["CustomerCareEmailAddress"].ToString()</h6>
+
+</div>
+				</div>
+                     }
+                    
+                     }
+			</div>
+		</div>
+	</div>
+	<!-- ADDRESS SECTION END -->
+	<!-- GOOGLE MAP SECTION START -->
+	<div class="google-map-section">
+		<div class="container-fluid">
+			<div class="google-map plr-185">
+				<div id="googleMap" style="position: relative; overflow: hidden;">
+					<div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+						<div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px;
+						border-width: 0px; margin: 0px;">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1425828331344!2d80.9786931154982!3d26.867210683147313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd494d8a2e67%3A0x1dd75473a33e80bc!2sMGA+Electronics!5e0!3m2!1sen!2sin!4v1537889451603"
+									style="height: 100%; width: 100%;border:0" frameborder="0" allowfullscreen></iframe>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- GOOGLE MAP SECTION END -->
+	<!-- MESSAGE BOX SECTION START -->
+	<div class="message-box-section mb-80" style="margin-top:40px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="message-box box-shadow white-bg">
+
+
+						<div class="form-group">
+							@if (TempData["SuccessMessage"] != null)
+							{
+								<div class="alert alert-success" style="margin: 10px 0">
+									@TempData["SuccessMessage"]
+								</div>
+							}
+							@if (TempData["ErrorMessage"] != null)
+							{
+								<div class="alert alert-danger" style="margin: 10px 0">
+									@TempData["ErrorMessage"]
+								</div>
+							}
+						</div>
+						@using (Html.BeginForm())
+						{
+							@Html.ValidationSummary()
+							@*<div class="row">
+								<div class="col-md-12">
+									<h4 class="blog-section-title border-left mb-30">get in touch</h4>
+								</div>
+								<div class="col-md-6">
+									@*<input type="text" name="name" placeholder="Your name here">*@
+									@*@Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Your name here" })
+									@Html.ValidationMessageFor(m => m.Name, null, new { @class = "Validat_style" })
+								</div>
+								<div class="col-md-6">
+									@Html.TextBoxFor(m => m.From, new { @class = "form-control", @placeholder = "Your email here" })
+									@Html.ValidationMessageFor(m => m.From, null, new {  })
+								</div>
+								<div class="col-md-6">
+									@Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @placeholder = "Subject here" })
+									@Html.ValidationMessageFor(m => m.Subject, null, new {  })
+								</div>
+								<div class="col-md-6">
+									@Html.TextBoxFor(m => m.Mobile, new { @class = "form-control", @placeholder = "Your phone here" })
+									@Html.ValidationMessageFor(m => m.Mobile, null, new {  })
+								</div>
+								<div class="col-md-12">
+									@Html.TextBoxFor(m => m.Body, new { @class = "form-control", @placeholder = "Message" })
+									@Html.ValidationMessageFor(m => m.Body, null, new { @class = "custom-textarea" })
+
+									<button class="submit-btn-1 mt-30 btn-hover-1" type="submit">submit message</button>
+								</div>
+							</div>*@
+							@*<p class="form-messege"></p>*@
+
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- MESSAGE BOX SECTION END -->
+</section>

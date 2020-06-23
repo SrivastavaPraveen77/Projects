@@ -1,0 +1,607 @@
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csprojResolveAssemblyReference.cache
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll.config
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.pdb
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Antlr3.Runtime.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xmlworker.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Infrastructure.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Optimization.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebGrease.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.pdb
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.pdb
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.pdb
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.pdb
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.pdb
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.pdb
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.xml
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\System.Spatial.resources.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.dll
+D:\MGACharger\MGACharger7\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll.config
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Antlr3.Runtime.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Infrastructure.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.Formatting.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.WebHost.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Optimization.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebGrease.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.pdb
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.Formatting.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.WebHost.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.xml
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\System.Spatial.resources.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csprojAssemblyReference.cache
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csproj.CoreCompileInputs.cache
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csproj.CopyComplete
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.dll
+D:\Work\MGA\MGAChargerEcommerce (5)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll.config
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Antlr3.Runtime.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xmlworker.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Infrastructure.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Optimization.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebGrease.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.pdb
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.xml
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\System.Spatial.resources.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csprojResolveAssemblyReference.cache
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.dll
+D:\MGACharger\MGACharger8\MGAChargerEcommerce (6)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Antlr3.Runtime.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xmlworker.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Infrastructure.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Optimization.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebGrease.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.xml
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\System.Spatial.resources.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csprojResolveAssemblyReference.cache
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.dll
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.pdb
+D:\MGACharger\MGACharger9\MGAChargerEcommerce (7)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll.config
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csprojAssemblyReference.cache
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csproj.CoreCompileInputs.cache
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll.config
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.pdb
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Antlr3.Runtime.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Infrastructure.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.Formatting.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.WebHost.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Optimization.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebGrease.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.pdb
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.pdb
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.pdb
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.pdb
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.pdb
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.Formatting.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.WebHost.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.xml
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\System.Spatial.resources.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csproj.CopyComplete
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.dll
+G:\Praveen\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll.config
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGAChargerEcommerce.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Antlr3.Runtime.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xmlworker.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Infrastructure.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Optimization.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebGrease.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.BASE.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.DBServices.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.Utility.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\HtmlAgilityPack.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\itextsharp.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGA.ActionLayer.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\MGADataLayer.pdb
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\EntityFramework.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Newtonsoft.Json.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Net.Http.WebRequest.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Helpers.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Mvc.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Razor.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Deployment.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.WebPages.Razor.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.Data.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\WebMatrix.WebData.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.AspNet.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.Core.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OAuth.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Web.Http.OData.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.Edm.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\Microsoft.Data.OData.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\System.Spatial.xml
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\de\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\es\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\fr\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\it\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ja\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ko\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\ru\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hans\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\bin\zh-Hant\System.Spatial.resources.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.csprojResolveAssemblyReference.cache
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.dll
+D:\MGACharger\AnupamSir\MGAChargerEcommerce (2)\MGAChargerEcommerce\MGAChargerEcommerce\obj\Debug\MGAChargerEcommerce.pdb

@@ -1,0 +1,163 @@
+﻿@model MGAChargerEcommerce.Models.ManageShipingDetail
+
+@{
+    ViewBag.Title = "ShpingDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">Shiping Details</div>
+            <div class="panel-body">
+                <div id="msg"></div>
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                <div class="alert alert-success" role="alert" id="datamasg">@TempData["SuccessMessage"].ToString()</div>
+                }
+                else if (TempData["ErrorMessage"] != null)
+                {
+                <div class="alert alert-danger" role="alert" id="datamasg1">@TempData["ErrorMessage"].ToString()</div>
+                }
+
+                <div class="col-md-6 cat-form">
+                    @using (Html.BeginForm("ShipingDetails", "Admin", FormMethod.Post, new { Id = "form1" }))
+                    {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.SourceName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.shipingDetail.SourceName, new { @class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.shipingDetail.SourceName)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.StateName, new { @class = "col-sm-3 control-label" })
+                    </div>
+
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.shipingDetail.StateName, ViewBag.stateListList as List<SelectListItem>, "--Select State--", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.shipingDetail.StateName)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.CourierName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.shipingDetail.CourierName, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.shipingDetail.CourierName) })
+                        @Html.ValidationMessageFor(model => model.shipingDetail.CourierName)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.Product, new { @class = "col-sm-3 control-label" })
+                    </div>
+
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.shipingDetail.Product, ViewBag.productList as List<SelectListItem>, "--Select Product--", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.shipingDetail.Product)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.CourierCategory, new { @class = "col-sm-3 control-label" })
+                    </div>
+
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.shipingDetail.CourierCategory, ViewBag.couriercategoryList as List<SelectListItem>, "--Select Courier Category--", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.shipingDetail.CourierCategory)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.CourierCharge)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.shipingDetail.CourierCharge, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.shipingDetail.CourierCharge) })
+                        @Html.ValidationMessageFor(model => model.shipingDetail.CourierCharge)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.ProductDimensioon)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.shipingDetail.ProductDimensioon, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.shipingDetail.ProductDimensioon) })
+                        @Html.ValidationMessageFor(model => model.shipingDetail.ProductDimensioon)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.shipingDetail.ProdctWeight)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.shipingDetail.ProdctWeight, new { @class = "form-control",placeholder = Html.DisplayNameFor(n => n.shipingDetail.ProdctWeight)})
+                        @Html.ValidationMessageFor(model => model.shipingDetail.ProdctWeight)
+                    </div>
+
+                    <div class="editor-field">
+                        <input type="submit" value="Submit" class="btn btn-sm btn-primary resbtn" />
+
+                    </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        @if (Model.shipingDetailList.Count > 0 && Model.shipingDetailList != null)
+        {
+            int SrNo = 0;
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>S/No.</th>
+                            <th>Source City</th>
+                            
+                            <th>State</th>
+                            <th>Courier Name</th>
+                            <th>Courier Cat.</th>
+                            <th>Courier Charges.</th>
+                            <th>Product Name.</th>
+                            <th>Product Dimension</th>
+                            <th>Product Weight(in Kg)</th>
+
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model.shipingDetailList)
+                        {
+                            SrNo++;
+                            <tr id="row_@item.ShippingId">
+                                <td>@SrNo</td>
+                                <td>@item.SourceName</td>
+                                <td>@item.StateName</td>
+                                <td>@item.CourierName</td>
+                                <td>@item.CourierCategory</td>
+                                <td>@item.CourierCharge</td>
+                                <td>@item.Product</td>
+                                <td>@item.ProductDimensioon</td>
+                                <td>@item.ProdctWeight</td>
+
+                                
+                                <td>
+                                    <a href="/Admin/UpdateShipingDetail/@item.ShippingId" style="cursor:pointer"><i class="fa fa-pencil-square-o"></i></a>
+                                    
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    $("#shipingDetail_SourceName").val("LUCKNOW(Source)");
+    $("#shipingDetail_SourceName").disabled();
+    </script>

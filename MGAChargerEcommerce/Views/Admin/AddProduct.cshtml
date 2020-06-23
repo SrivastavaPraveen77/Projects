@@ -1,0 +1,390 @@
+﻿@model MGAChargerEcommerce.Models.ManageAddProduct
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">Add New Product</div>
+            <div class="panel-body">
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success" id="message" role="alert">@TempData["Success"].ToString()</div>
+                }
+                else if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">@TempData["Error"].ToString()</div>
+                }
+                @using (Html.BeginForm("AddProduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", Id = "form1" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+
+                    <div class="editor-label">
+                        @Html.HiddenFor(model => model.Addproduct.ProductId)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductCode)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductCode, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.ProductCode) })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductCode)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductName, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.ProductName) })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductName)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductCategory)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.Addproduct.ProductCategory, ViewBag.ProductCategoryList as List<SelectListItem>, "-Select Product Category-", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductCategory)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+                    </div>
+                     <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductOrder)
+                    </div>
+                    <div class="editor-field">
+                       @Html.TextBoxFor(model => model.Addproduct.ProductOrder, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.ProductOrder) })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductOrder)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductDescription)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.Addproduct.ProductDescription, new { style = "width:100%;height:60px;" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductDescription)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductReturnPolicy)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.Addproduct.ProductReturnPolicy, new { style = "width:100%;height:60px;" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductReturnPolicy)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductRate)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductRate, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.ProductRate) })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductRate)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+
+                    @*<div class="editor-label" style="visibility:hidden;">*@
+                          <div class="editor-label">
+                        @*@Html.LabelFor(model => model.Addproduct.OfferDescription, new { style = "visibility:hidden;" })*@
+@Html.LabelFor(model => model.Addproduct.OfferDescription)
+
+                    </div>
+                    @*<div class="editor-field" style="visibility:hidden">*@
+                     <div class="editor-field">
+                        @*@Html.TextAreaFor(model => model.Addproduct.OfferDescription, new { style = "width:100%;height:60px;visibility:hidden;" })*@
+                         @Html.TextAreaFor(model => model.Addproduct.OfferDescription)
+                        @Html.ValidationMessageFor(model => model.Addproduct.OfferDescription)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.SubTotalAmount)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.SubTotalAmount, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.SubTotalAmount) })
+                        @Html.ValidationMessageFor(model => model.Addproduct.SubTotalAmount)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Addproduct.CGSTPercentage)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.Addproduct.CGSTPercentage, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.CGSTPercentage) })
+                                @Html.ValidationMessageFor(model => model.Addproduct.CGSTPercentage)
+                                <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Addproduct.CGSTAmount)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.Addproduct.CGSTAmount, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.CGSTAmount) })
+                                @Html.ValidationMessageFor(model => model.Addproduct.CGSTAmount)
+                                <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Addproduct.SGSTPercentage)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.Addproduct.SGSTPercentage, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.SGSTPercentage) })
+                                @Html.ValidationMessageFor(model => model.Addproduct.SGSTPercentage)
+                                <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Addproduct.SGSTAmount)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.Addproduct.SGSTAmount, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.SGSTAmount) })
+                                @Html.ValidationMessageFor(model => model.Addproduct.SGSTAmount)
+                                <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Addproduct.IGSTPercentage)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.Addproduct.IGSTPercentage, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.IGSTPercentage) })
+                                @Html.ValidationMessageFor(model => model.Addproduct.IGSTPercentage)
+                                <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Addproduct.IGSTAmount)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.Addproduct.IGSTAmount, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.IGSTAmount) })
+                                @Html.ValidationMessageFor(model => model.Addproduct.IGSTAmount)
+                                <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+
+                        </div>
+
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.TotalAmountIncludeTax)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.TotalAmountIncludeTax, new { style = "width:100%;height:40px;", placeholder = Html.DisplayNameFor(n => n.Addproduct.TotalAmountIncludeTax) })
+                        @Html.ValidationMessageFor(model => model.Addproduct.TotalAmountIncludeTax)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductImage)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductImage, new { @type = "file", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductImage)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductImageSideView)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductImageSideView, new { @type = "file", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductImageSideView)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductImageTopView)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductImageTopView, new { @type = "file", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductImageTopView)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductImageBottomView)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductImageBottomView, new { @type = "file", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductImageBottomView)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Addproduct.ProductImageDetail)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Addproduct.ProductImageDetail, new { @type = "file", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Addproduct.ProductImageDetail)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+
+                    <p>
+                        <input type="submit" value="Submit" class="btn btn-sm btn-primary btn-margin" />
+                    </p>
+
+
+                }
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="col-md-12">
+    @if (Model.ProductList.Count > 0 && Model.ProductList != null)
+    {
+        int SrNo = 0;
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Customer Name</th>
+                        <th>Image</th>
+
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model.ProductList)
+                    {
+                        SrNo++;
+                        <tr id="row_@item.ProductId">
+                            <td>@SrNo</td>
+                            <td>@item.ProductName</td>
+                            <td><img src="~/Content/ProductImage/@item.ProductImage" height="110" width="80" onmouseover="return ZoomImage(this);" onmouseout="return ZoomOutImage(this);" /></td>
+                            <td>
+                                <a href="/Admin/UpdateProduct/@item.ProductId" style="cursor:pointer"><i class="fa fa-pencil-square-o"></i></a>
+                                <a href="/Admin/DeleteProduct/@item.ProductId" style="cursor:pointer"><i class="fa fa-trash-o fa-fw"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+<script src="~/Scripts/ckeditor/adapters/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        $("#ProductDescription").ckeditor();
+        $("#ProductReturnPolicy").ckeditor();
+        $("#Addproduct_OfferDescription").ckeditor();
+
+        //$('#Addproduct_IGSTAmount').change(function () {
+        //    var total = parseFloat($("#Addproduct_SubTotalAmount").val()) + parseFloat($("#Addproduct_IGSTAmount").val());
+        //    $("#Addproduct_TotalAmountIncludeTax").val(Math.round(total));
+        //});
+
+        //$('#Addproduct_IGSTPercentage').change(function () {
+        //    $("#Addproduct_CGSTPercentage").val("9");
+        //    $("#Addproduct_SGSTPercentage").val("9");
+        //    $("#Addproduct_IGSTPercentage").val("18");
+
+
+        //    var CGSTAmount = parseFloat($("#Addproduct_SubTotalAmount").val()) * parseInt($("#Addproduct_CGSTPercentage").val()) / 100;
+        //    var SGSTAmount = parseFloat($("#Addproduct_SubTotalAmount").val()) * parseInt($("#Addproduct_SGSTPercentage").val()) / 100;
+        //    var IGSTAmount = parseFloat($("#Addproduct_SubTotalAmount").val()) * parseInt($("#Addproduct_IGSTPercentage").val()) / 100;
+
+
+            
+        //    $("#Addproduct_CGSTAmount").val(CGSTAmount);
+        //    $("#Addproduct_SGSTAmount").val(SGSTAmount);
+        //    $("#Addproduct_IGSTAmount").val(IGSTAmount);
+
+        //    var total = parseFloat($("#Addproduct_SubTotalAmount").val()) + parseFloat($("#Addproduct_IGSTAmount").val());
+        //    $("#Addproduct_TotalAmountIncludeTax").val(Math.round(total));
+        //});
+
+        $("#Addproduct_CGSTPercentage").blur(function () {
+
+            var subTotal = parseFloat($("#Addproduct_SubTotalAmount").val());
+            var cGstPercentage = parseFloat($("#Addproduct_CGSTPercentage").val());
+            if (isNaN(subTotal) || isNaN(cGstPercentage)) {
+                alert("Subtotal amount and CGST percentage should not be empty please enter value.");
+            }
+            else {
+                $("#Addproduct_CGSTAmount").val(subTotal * cGstPercentage / 100);
+
+            }
+
+        });
+
+        $("#Addproduct_SGSTPercentage").blur(function () {
+
+            var subTotal = parseFloat($("#Addproduct_SubTotalAmount").val());
+            var sGstPercentage = parseFloat($("#Addproduct_SGSTPercentage").val());
+
+            if (isNaN(subTotal) || isNaN(sGstPercentage)) {
+                alert("Subtotal amount and SGST percentage should not be empty please enter value.");
+            }
+            else {
+                $("#Addproduct_SGSTAmount").val(subTotal * sGstPercentage / 100);
+
+            }
+        });
+
+        $("#Addproduct_IGSTPercentage").blur(function () {
+
+            var subTotal = parseFloat($("#Addproduct_SubTotalAmount").val());
+            var IGstPercentage = parseFloat($("#Addproduct_IGSTPercentage").val());
+
+            if (isNaN(subTotal) || isNaN(IGstPercentage)) {
+                alert("Subtotal amount and IGST percentage should not be empty please enter value.");
+            }
+            else {
+                $("#Addproduct_IGSTAmount").val(subTotal * IGstPercentage / 100);
+
+                $("#Addproduct_TotalAmountIncludeTax").val(parseFloat($("#Addproduct_SubTotalAmount").val()) + parseFloat($("#Addproduct_IGSTAmount").val()));
+
+            }
+        });
+
+
+    });
+</script>

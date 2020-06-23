@@ -1,0 +1,422 @@
+﻿@{
+	ViewBag.Title = "MGA Charger";
+	Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<style type="text/css">
+.centered {position: relative;font-size: 22px;font-weight: 600;width: 100%;background: #000; padding:10px;}
+.container {text-align: center;color: #fff;}
+</style>
+
+@*<div class="slider-area  plr-185  mb-80"> style="padding:0px !important;"*@
+<div class="slider-area">
+	<div class="container-fluid">
+		<div class="slider-content">
+			<div class="row">
+				<div class="active-slider-1 slick-arrow-1 slick-dots-1">
+					<!-- layer-1 Start -->
+
+					@{
+						MGA.Base.ActionResult actionResult = new MGA.Base.ActionResult();
+						MGA.ActionLayer.Home.HomeAL adminAction = new MGA.ActionLayer.Home.HomeAL();
+
+						MGA.BASE.Home.ProductBase baseModel0 = new MGA.BASE.Home.ProductBase();
+						//MGAChargerEcommerce.Models.ManageProduct model = new MGAChargerEcommerce.Models.ManageProduct();
+						//List<MGAChargerEcommerce.Models.ManageProduct> productList = new List<MGAChargerEcommerce.Models.ManageProduct>();
+						baseModel0.ActionId = 10;
+
+						adminAction = new MGA.ActionLayer.Home.HomeAL();
+						actionResult = adminAction.get_Products(baseModel0);
+
+						if (actionResult.dtResult !=null && actionResult.dtResult.Rows.Count > 0)
+						{
+							for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+							{
+								<div class="col-md-12" style="padding-right:0px;">
+									<div class="layer-1">
+										<div class="slider-img" style="width:100%;">
+
+											<div class="container" style="width:100%;">
+												<img src="@actionResult.dtResult.Rows[i]["Image"].ToString()" alt="" width="100%">
+												<div class="centered">@actionResult.dtResult.Rows[i]["EventName"].ToString()</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							}
+						}
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- END SLIDER AREA -->
+<!-- Start page content -->
+<section id="page-content" class="page-wrapper">
+
+	<div class="up-comming-product-section mb-80 gray-bg">
+		<div class="container">
+			<div class="row">
+				<!-- up-comming-pro -->
+				<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 50px 0px 50px 0px">
+					<div class="up-comming-pro clearfix">
+						<div class="col-md-12">
+							<div class="section-title text-center mb-50">
+								<h1 class="uppercase">We are MGA Charger!</h1>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="section-title text-center">
+								<p style="line-height: 2; color:black;">
+									Starting Way Back in 2002 we had started under the brand name MGA zip , we manufacturing Electronic Products Like , Battery Chargers, Solar products , Servo etc.
+									We are among top 10 Battery Charger Players.
+									A One Stop Shop For Complete Power Solutions.
+									<br /><br />
+								</p>
+								<p style="line-height: 2; text-align:center">We Provide Best Features In Our Products With Reliability &amp; Digital Programmable features.</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- New PRODUCT SECTION START -->
+	<div class="featured-product-section mb-50">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title text-left mb-40">
+						<h2 class="uppercase">NEW PRODUCTS</h2>
+						<h6>There are many variations of Battery Chargers ,Solar products ,Servo available.</h6>
+					</div>
+				</div>
+			</div>
+			<div class="featured-product">
+				<div class="row active-featured-product slick-arrow-2">
+					<!-- product-item start -->
+					<!-- banner-item start (top 4) -->
+
+					@{
+
+						MGA.BASE.Home.ProductBase baseModel = new MGA.BASE.Home.ProductBase();
+						//MGAChargerEcommerce.Models.ManageProduct model = new MGAChargerEcommerce.Models.ManageProduct();
+						//List<MGAChargerEcommerce.Models.ManageProduct> productList = new List<MGAChargerEcommerce.Models.ManageProduct>();
+						baseModel.ActionId = 2;
+
+						adminAction = new MGA.ActionLayer.Home.HomeAL();
+						actionResult = adminAction.get_Products(baseModel);
+
+						if (actionResult.dtResult!=null && actionResult.dtResult.Rows.Count > 0)
+						{
+							for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+							{
+
+								string imagepath = actionResult.dtResult.Rows[i]["ProductImage"].ToString();
+
+								<div class="col-xs-12">
+									<div class="product-item">
+										<div class="product-img" style="overflow: hidden;">
+											<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">
+												<img class="index_newProd_img" src="@(!String.IsNullOrEmpty(imagepath) ? "/Content/ProductImage/"+imagepath : "/Content/webHome/images/noimage.png")" />
+											</a>
+										</div>
+										<div class="product-info">
+											<h6 class="product-title">
+												<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">@actionResult.dtResult.Rows[i]["ProductName"].ToString()</a>
+											</h6>
+											<h3 class="pro-price">₹ @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString()</h3>
+											<br>
+											@*<a class="button extra-small" href="/Home/Shop"><span style="width: 100%; background-color:#69818c">Add to cart</span></a>*@
+
+
+											@Html.ActionLink("Add to cart", "AddToCart_Index", "Shop", new { id = @actionResult.dtResult.Rows[i]["ProductId"].ToString(),
+		  productname = @actionResult.dtResult.Rows[i]["ProductName"].ToString(), qty = 1 , productRate = @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString(),
+		  productImage = @actionResult.dtResult.Rows[i]["ProductImage"].ToString()
+	  },  new { @class = "index_addtocart" })
+
+										</div>
+									</div>
+								</div>
+
+							}
+						}
+					}
+
+					<!-- product-item end -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- new PRODUCT SECTION END -->
+	<!-- PRODUCT TAB SECTION START -->
+	<div class="product-tab-section mb-50" style="background-color: #f6f6f6;">
+		<div class="container">
+			<div class="row mt-60 mb-60">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<div class="section-title text-left mb-40">
+						<h2 class="uppercase">product list</h2>
+						<h6>There are many variations of Battery Chargers ,Solar products ,Servo available.</h6>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<div class="pro-tab-menu text-right">
+						<!-- Nav tabs -->
+						<ul class="">
+							<li class="active" style="margin-left:0px; margin-right:20px;"><a href="#popular-product" data-toggle="tab">Industrial Battery Charger</a></li>
+							<li style="margin-left:0px; margin-right:20px;"><a href="#new-arrival" data-toggle="tab">Home Used Battery Charger</a></li>
+							<li style="margin-left:0px; "><a href="#best-seller" data-toggle="tab">Solar Unit</a></li>
+							@*<li><a href="#special-offer" data-toggle="tab">Special Offer</a></li>*@
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="product-tab">
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<!-- popular-product start -->
+					<div class="tab-pane active" id="popular-product">
+						<div class="row">
+							<!-- product-item start -->
+							@{
+
+								MGA.BASE.Home.ProductBase baseModel_p1 = new MGA.BASE.Home.ProductBase();
+								baseModel_p1.ActionId = 3;
+								baseModel_p1.ProductCategory = 1;
+								adminAction = new MGA.ActionLayer.Home.HomeAL();
+								actionResult = adminAction.get_Products(baseModel_p1);
+
+								if (actionResult.dtResult.Rows.Count > 0)
+								{
+									for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+									{
+
+										string imagepath = actionResult.dtResult.Rows[i]["ProductImage"].ToString();
+
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<div class="product-item product-item-2">
+												<div class="product-img" style="overflow: hidden;background-color: white;  text-align: center;">
+													<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">
+														<img class="product_img" src="@(!String.IsNullOrEmpty(imagepath) ? "/Content/ProductImage/"+imagepath : "/Content/webHome/images/noimage.png")" />
+													</a>
+												</div>
+												<div class="product-info">
+													<h6 class="product-title">
+														<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">@actionResult.dtResult.Rows[i]["ProductName"].ToString()</a>
+													</h6>
+													<h3 class="pro-price">₹ @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString()</h3>
+													<br>
+													@Html.ActionLink("Add to cart", "AddToCart_Index", "Shop", new { id = @actionResult.dtResult.Rows[i]["ProductId"].ToString(),
+		  productname = @actionResult.dtResult.Rows[i]["ProductName"].ToString(), qty = 1 , productRate = @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString(),
+		  productImage = actionResult.dtResult.Rows[i]["ProductImage"].ToString()
+	  },  new { @class = "index_addtocart_bottom" })
+
+												</div>
+											</div>
+										</div>
+
+									}
+								}
+							}
+							<!-- product-item end -->
+						</div>
+					</div>
+					<!-- popular-product end -->
+					<!-- new-arrival start -->
+					<div class="tab-pane" id="new-arrival">
+						<div class="row">
+							<!-- product-item start -->
+							@{
+
+								MGA.BASE.Home.ProductBase baseModel_p2 = new MGA.BASE.Home.ProductBase();
+								baseModel_p2.ActionId = 3;
+								baseModel_p2.ProductCategory = 2;
+								adminAction = new MGA.ActionLayer.Home.HomeAL();
+								actionResult = adminAction.get_Products(baseModel_p2);
+
+								if (actionResult.dtResult.Rows.Count > 0)
+								{
+									for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+									{
+
+										string imagepath = actionResult.dtResult.Rows[i]["ProductImage"].ToString();
+
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<div class="product-item product-item-2">
+												<div class="product-img" style="overflow: hidden;background-color: white;  text-align: center;">
+													<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">
+														<img class="product_img" src="@(!String.IsNullOrEmpty(imagepath) ? "/Content/ProductImage/"+imagepath : "/Content/webHome/images/noimage.png")" />
+													</a>
+												</div>
+												<div class="product-info">
+													<h6 class="product-title">
+														<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">@actionResult.dtResult.Rows[i]["ProductName"].ToString()</a>
+													</h6>
+													<h3 class="pro-price">₹ @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString()</h3>
+													<br>
+													@Html.ActionLink("Add to cart", "AddToCart_Index", "Shop", new { id = @actionResult.dtResult.Rows[i]["ProductId"].ToString(),
+		  productname = @actionResult.dtResult.Rows[i]["ProductName"].ToString(), qty = 1 , productRate = @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString(),
+		  productImage = actionResult.dtResult.Rows[i]["ProductImage"].ToString()
+	  },  new { @class = "index_addtocart_bottom" })
+												</div>
+											</div>
+										</div>
+
+									}
+								}
+							}
+							<!-- product-item end -->
+						</div>
+					</div>
+					<!-- new-arrival end -->
+					<!-- best-seller start -->
+					<div class="tab-pane" id="best-seller">
+						<div class="row">
+							<!-- product-item start -->
+							@{
+
+								MGA.BASE.Home.ProductBase baseModel_p3 = new MGA.BASE.Home.ProductBase();
+								baseModel_p3.ActionId = 3;
+								baseModel_p3.ProductCategory = 3;
+								adminAction = new MGA.ActionLayer.Home.HomeAL();
+								actionResult = adminAction.get_Products(baseModel_p3);
+
+								if (actionResult.dtResult.Rows.Count > 0)
+								{
+									for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+									{
+
+										string imagepath = actionResult.dtResult.Rows[i]["ProductImage"].ToString();
+
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<div class="product-item product-item-2">
+												<div class="product-img" style="overflow: hidden;background-color: white;  text-align: center;">
+													<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">
+														<img class="product_img_3" src="@(!String.IsNullOrEmpty(imagepath) ? "/Content/ProductImage/"+imagepath : "/Content/webHome/images/noimage.png")" />
+													</a>
+												</div>
+												<div class="product-info">
+													<h6 class="product-title">
+														<a href="/Shop/Details/@actionResult.dtResult.Rows[i]["ProductId"].ToString()" target="_blank">@actionResult.dtResult.Rows[i]["ProductName"].ToString()</a>
+													</h6>
+													<h3 class="pro-price">₹ @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString()</h3>
+													<br>
+													@Html.ActionLink("Add to cart", "AddToCart_Index", "Shop", new { id = @actionResult.dtResult.Rows[i]["ProductId"].ToString(),
+		  productname = @actionResult.dtResult.Rows[i]["ProductName"].ToString(), qty = 1 , productRate = @actionResult.dtResult.Rows[i]["TotalAmountIncludeTax"].ToString(),
+		  productImage = actionResult.dtResult.Rows[i]["ProductImage"].ToString()
+	  },  new { @class = "index_addtocart_bottom" })
+												</div>
+											</div>
+										</div>
+
+									}
+								}
+							}
+							<!-- product-item end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PRODUCT TAB SECTION END -->
+	<!-- BY clients SECTION START-->
+	<div class="by-brand-section mb-80">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title text-left mb-40">
+						<h2 class="uppercase">Our Top Ten Battery Charger Client's</h2>
+					</div>
+				</div>
+			</div>
+			<div class="by-brand-product">
+         	<div class="row active-by-brand slick-arrow-2">
+
+
+@{
+
+    MGA.ActionLayer.Admin.AdminAL adminAction_OurClient = new MGA.ActionLayer.Admin.AdminAL();
+    actionResult = adminAction_OurClient.Get_OurClients();
+
+                                if (actionResult.dtResult.Rows.Count > 0)
+                                {
+                                    for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+                                    {
+
+                                        string imagepath = actionResult.dtResult.Rows[i]["Image"].ToString();
+
+                                        <div class="col-xs-12">
+						<div class="single-brand-product">
+                            <img src="@imagepath" alt="">
+
+						</div>
+					</div>
+                                    }
+                                }}
+
+
+
+					
+					@*<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/sukam.jpg" alt="">
+
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/SouthernBatteries.png" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/Genus.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/Base.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/TerraMotors.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/microlute.png" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/ral.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/electra.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="single-brand-product">
+							<img src="~/Content/webHome/images/clients/eastman.png" alt="">
+						</div>
+					</div>*@
+			</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- BY clients SECTION END -->
+</section>
+

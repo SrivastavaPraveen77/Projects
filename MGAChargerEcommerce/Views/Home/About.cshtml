@@ -1,0 +1,137 @@
+﻿@model MGAChargerEcommerce.Models.HomeAboutusModel
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="breadcrumbs-section plr-200 mb-80">
+    <div class="breadcrumbs overlay-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs-inner">
+                        <h1 class="breadcrumbs-title">About</h1>
+                        <ul class="breadcrumb-list">
+                            <li><a href="/Home/Index">Home</a></li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="page-content" class="page-wrapper">
+    <div class="about-section mb-80">
+        @*@{
+              MGA.Base.ActionResult actionResult = new MGA.Base.ActionResult();
+              MGA.ActionLayer.Home.HomeAL adminAction = new MGA.ActionLayer.Home.HomeAL();
+
+              MGA.BASE.Home.ProductBase baseModel = new MGA.BASE.Home.ProductBase();
+              baseModel.ActionId = 9;
+
+              adminAction = new MGA.ActionLayer.Home.HomeAL();
+              actionResult = adminAction.get_Products(baseModel);
+
+              if (actionResult.dtResult.Rows.Count > 0)
+              {
+              for (int i = 0; i < actionResult.dtResult.Rows.Count; i++)
+              {
+              @Html.Raw(actionResult.dtResult.Rows[i]["HtmlContent"].ToString());
+              <p>@Html.Raw(@Model.ManageProductlist[0].ProductDescription)
+            }
+            }
+            else
+            {
+
+            }
+            }*@
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-left ">
+                        <h2 class="uppercase">about MGA Charger</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-photo p-20 bg-img-1"> <img src="~/Content/webHome/images/about/mgaoffice.jpg" alt=""> </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="about-description">
+                        @*<p> MGA Electronics is the leading BRAND in manufacturing of almost all types of Battery chargers in INDIA , and we feel hornour to say we supply our charger to greatest , prestigious clients in battery world like   , LUMINOUS , SU-KAM ,TERRA MOTOR ,GENUS , MICROMAX ENERGY , RAL , BASE , EASTMAN etc .</p>
+                            <p> Starting Way Back in 1992 we had started manufacturing Electronic Products Like Invertors, Battery Chargers, Solar products etc. & registered the business in 2002 under the brand name MGA Electronics .</p>
+                             <p>We manufactures best technology, modern Battery chargers which applicable on charge all   Automotive batteries, SMPS Batteries, VRLA Batteries, TUBULAR Batteries, Inverter Batteries etc with automatic cutoff and inbuilt Turbo charge features.</p>
+                             <p>Our motto has always been Customer Delight through Innovation & Passion with the focus on Execution & Team-work. At MGA, we passionately innovate to make life comfortable and efficient. </p>
+                             <p > Incepted in the year 2002 at Lucknow, (Uttar Pradesh, India), we “Mga Electronics” are a Sole Proprietorship Firm, known as the reputed manufacturer & exporter of the best quality Battery Charger, SMPS Battery Charger, etc. Under the management of our mentor “Narendra Kumar Gupta (Proprietor)” we have achieved a perfect position in the industry. We Export our products to Nepal.</p>
+                             <p><b>Company Bank account HDFC BANK</b> <br />
+                             <b>MGA ELECTRONICS (Current Account)</b> <br />
+                             <b>A/C No. :50200010085210</b> <br />
+                             <b>IFSC : HDFC0000296</b></p>*@
+                        <p> @{
+                                MGA.Base.ActionResult actionResult = new MGA.Base.ActionResult();
+                                MGA.ActionLayer.Admin.AdminAL adminAction = new MGA.ActionLayer.Admin.AdminAL();
+                                MGA.Base.Admin.ManagePages model = new MGA.Base.Admin.ManagePages();
+                                model.PageId = 5;//means About us page
+                                actionResult = adminAction.GetPage(model);
+                                if (actionResult.dtResult.Rows.Count > 0)
+                                {
+                                    @Html.Raw(@actionResult.dtResult.Rows[0]["HtmlContent"]);
+                                }
+                            }
+                        </p>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="up-comming-product-section ptb-60" style="background-color: #585669;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center mb-50">
+                            <h1 class="uppercase" style="font-size: 32px; color:white;">OUR INFRASTRUCTURE</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h4 style="font-size: 21px; line-height: 2; text-align:center;color:whitesmoke;"> To manufacture the provided products, we have set-up technically advanced and contemporary infrastructural unit. We have systematically divided our infrastructure unit into numerous departments which include quality management department, packaging department, procurement department, manufacturing department, etc. Moreover, this infrastructural unit is installed with modern tools, equipment and machinery to enhance the manufacturing capacity. </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="up-comming-product-section ptb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center mb-50">
+                            <h1 class="uppercase" style="font-size: 32px;">WHY US?</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h4 style="font-size: 21px; line-height: 2; text-align:justify;">
+                                Being one of the reputed organizations in the market, we are engaged in offering an exclusive range of products. <br />
+                                The features for which we have received appreciation from our clients: <br />
+                                <br />
+                                <img src="~/Content/webHome/images/about/verified.png" alt="">&nbsp;&nbsp;Infrastructural facility<br />
+                                <img src="~/Content/webHome/images/about/verified.png" alt="">&nbsp;&nbsp;Experienced team of professionals<br />
+                                <img src="~/Content/webHome/images/about/verified.png" alt="">&nbsp;&nbsp;Client-centric approach<br />
+                                <img src="~/Content/webHome/images/about/verified.png" alt="">&nbsp;&nbsp;Competitive price structure<br />
+                                <img src="~/Content/webHome/images/about/verified.png" alt="">&nbsp;&nbsp;Timely delivery<br />
+                                <img src="~/Content/webHome/images/about/verified.png" alt="">&nbsp;&nbsp;Qualitative range of product<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+@*https://www.indiamart.com/mgaelectronics-lucknow/profile.html*@ 

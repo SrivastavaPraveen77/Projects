@@ -1,0 +1,517 @@
+﻿@model MGAChargerEcommerce.Models.MyOrderDetailModel
+@{
+    ViewBag.Title = "PckingDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<header>
+
+    <style>
+        .invoice-title h2, .invoice-title h3 {
+            display: inline-block;
+        }
+
+        .table > tbody > tr > .no-line {
+            border-top: none;
+        }
+
+        .table > thead > tr > .no-line {
+            border-bottom: none;
+        }
+
+        .table > tbody > tr > .thick-line {
+            border-top: 2px solid;
+        }
+    </style>
+
+</header>
+
+<div class="container">
+    <div id="content">
+        <h4><b>Invoice</b></h4>
+        <div class="WordSection1">
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">Ship to:</p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><b><span style="font-size:11.0pt;line-height:115%">@Model.myOrderDetailList[0].BName<br></span></b></p>
+            <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><b><span style="font-size:10.0pt">@Model.myOrderDetailList[0].BAddress<br> </span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><b><span style="font-size:10.0pt">@Model.myOrderDetailList[0].BCity&nbsp;@Model.myOrderDetailList[0].BState&nbsp;@Model.myOrderDetailList[0].BCountry&nbsp;@Model.myOrderDetailList[0].PinCode&nbsp;</span></b></p>
+<div style="border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in">
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;border:none;padding:0in"><b><span style="font-size:10.0pt">Phone:&nbsp;@Model.myOrderDetailList[0].BPhoneNo</span></b></p>
+</div>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><b><span style="font-size:9.0pt;line-height:115%">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><b><span style="font-size:10.0pt;line-height:115%">Order Id#&nbsp;@Model.myOrderDetailList[0].OrderNumber</span></b></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;line-height:115%">Thank you for buying from MGA Charger.</span></p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="878" style="width:526.5pt;margin-left:.9pt;border-collapse:collapse;border:none">
+    <tbody>
+        <tr style="height:78.65pt">
+            <td width="383" valign="top" style="width:273.5pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:78.65pt">
+                <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:11.0pt">Delivery Address :</span></b></p>
+                <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">@Model.myOrderDetailList[0].DName </span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">@Model.myOrderDetailList[0].DAddress</span></b></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">@Model.myOrderDetailList[0].DCity&nbsp;@Model.myOrderDetailList[0].DState&nbsp;@Model.myOrderDetailList[0].ShippingCountry&nbsp;@Model.myOrderDetailList[0].DPinCode</span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:12.0pt">&nbsp;</span></b></p>
+</td>
+<td width="214" valign="top" style="width:128.3pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:78.65pt">
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">Order Date</span></b></p>
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">&nbsp;</span></b></p>
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">Buyer Name</span></b></p>
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">&nbsp;</span></b></p>
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">Seller Name</span></b></p>
+</td>
+<td width="281" valign="top" style="width:168.7pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt;height:78.65pt">
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">@Convert.ToDateTime(@Model.myOrderDetailList[0].OrderDate).ToString("dd/MM/yyyy")</span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">@Model.myOrderDetailList[0].BName</span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt">MGA Electronics</span></b><br /><span style="font-size:10.0pt">34-A Narayan Nagar,</span><br /><span style="font-size:10.0pt">Near Ravindra Palli,</span><br /><span style="font-size:10.0pt">GSTIN/UIN : 09AFOPG9627E1Z4</span><br /> <span style="font-size:10.0pt">Uttar Pradesh, Code:09 </span><br /><span style="font-size:10.0pt">Contact :0522-4062503,7499394690</span> <br /><span style="font-size:10.0pt"> Email :mgacharger@yahoo.com </span><br /><span style="font-size:10.0pt">wwww.mgacharger.com<span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="893" style="width:535.5pt;margin-left:.9pt;border-collapse:collapse;border:none">
+    <tbody>
+        <tr>
+            <td width="30" valign="top" style="width:.25in;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" style="margin-top:0in;margin-right:-9.9pt;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal"><span style="font-size:9.0pt">Sl.</span></p>
+                <p class="MsoNormal" style="margin-top:0in;margin-right:-9.9pt;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal"><span style="font-size:9.0pt">No</span></p>
+            </td>
+            <td width="293" valign="top" style="width:175.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size:9.0pt">Product Details</span></p>
+            </td>
+            <td width="75" valign="top" style="width:45.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal">
+                    <span style="font-size:9.0pt">
+                        Unit
+                        price
+                    </span>
+                </p>
+            </td>
+            @*<td width="60" valign="top" style="width:.5in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">SGST</span></p>
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">Rate</span></p>
+            </td>*@
+            @*<td width="60" valign="top" style="width:.5in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">SGST Amt.</span></p>
+            </td>*@
+            @*<td width="60" valign="top" style="width:.5in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">CGST</span></p>
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">Rate</span></p>
+            </td>*@
+            @*<td width="60" valign="top" style="width:.5in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">CGST</span></p>
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">Amt.</span></p>
+            </td>*@
+            @*<td width="53" valign="top" style="width:31.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">IGST</span></p>
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">Rate</span></p>
+            </td>*@
+            @*<td width="60" valign="top" style="width:.5in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">CGST</span></p>
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">Amt.</span></p>
+            </td>*@
+            <td width="53" valign="top" style="width:31.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">Qty</span></p>
+            </td>
+            <td width="90" valign="top" style="width:.75in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt">
+                <p class="MsoNormal" align="center" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal"><span style="font-size:9.0pt">Subtotal</span></p>
+            </td>
+        </tr>
+        @{int SrNo = 0;
+        foreach (var item in Model.myOrderDetailList)
+        {
+            ++SrNo;
+            <tr style="height:139.9pt">
+                <td width="30" valign="top" style="width:.25in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+                    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size:9.0pt">@SrNo</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>
+<td width="293" valign="top" style="width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:9.0pt">@item.ProductName</span></b></p>
+@*<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+                  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    normal"><b><span style="font-size:9.0pt">Shipping Charges</span></b></p>
+                  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    normal"><b><span style="font-size:9.0pt">Category</span></b><span style="font-size:9.0pt">-&nbsp;Industrial Battery Charger</span></p>
+                  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    normal"><b><span style="font-size:9.0pt">Product Code</span></b><span style="font-size:9.0pt">-&nbsp;898</span></p>
+                  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    normal"><span style="font-size:9.0pt">&nbsp;</span></p>*@
+</td>
+<td width="75" valign="top" style="width:45.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">@item.UnitPrice</span></p>
+<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+@*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+    text-align:right;line-height:normal"><span style="font-size:9.0pt">190.68</span></p>
+                  <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+    text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+                  <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+    text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+                  <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+    text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>*@
+</td>
+@*<td width="60" valign="top" style="width:.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal">
+        <span style="font-size:9.0pt">
+            0&nbsp;%
+        </span>
+    </p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>*@
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+        text-align:right;line-height:normal">
+                          <span style="font-size:9.0pt">
+                              0&nbsp;%
+                          </span>
+                      </p>*@
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>*@
+@*<td width="60" valign="top" style="width:.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">0.00</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+        text-align:right;line-height:normal"><span style="font-size:9.0pt">0.00</span></p>*@
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>*@*
+@*<td width="60" valign="top" style="width:.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">0&nbsp;%</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in; margin-bottom:.0001pt;text-align:right; line-height:normal"><span style="font-size:9.0pt">&nbsp;%</span></p>*@
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>*@
+@*<td width="60" valign="top" style="width:.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">0.00</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+        text-align:right;line-height:normal"><span style="font-size:9.0pt">0.00</span></p>*@
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>*@*
+@*<td width="53" valign="top" style="width:31.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">0&nbsp;%</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>*@
+@*<td width="60" valign="top" style="width:.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">0.00</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+        text-align:right;line-height:normal"><span style="font-size:9.0pt">34.32</span></p>*@
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>*@
+<td width="53" valign="top" style="width:31.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">@item.Quantity</span></p>
+<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>
+<td width="90" valign="top" style="width:.75in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:139.9pt">
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal">
+        <span style="font-size:9.0pt">
+        @{
+                decimal Subtotaltotal = 0;
+
+                Subtotaltotal = Convert.ToDecimal(item.UnitPrice) * Convert.ToDecimal(item.Quantity);    
+
+            }
+
+            @Subtotaltotal
+                                      
+        </span>
+    </p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    @*<p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+        text-align:right;line-height:normal"><span style="font-size:9.0pt">225</span></p>*@
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+    <p class="MsoNormal" align="right" style="margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="font-size:9.0pt">&nbsp;</span></p>
+</td>
+</tr>
+        }
+        }
+          <tr>
+            @{
+           
+                decimal totalqty = 0;
+                decimal totalshiping = 0;
+                decimal shipingCharges=0;
+
+                foreach (var item in Model.myOrderDetailList)
+                {
+                    totalqty = totalqty +Convert.ToDecimal(item.Quantity);  
+                    shipingCharges=item.ShippingCharges;
+                    
+                }
+                totalshiping = totalqty * shipingCharges;
+                //totalshiping = totalqty * 100;
+            }
+
+
+            <td colspan="11" align="right">
+                Shiping and Handling Charge&nbsp;(INR)-&nbsp;<b>
+                    @totalshiping
+                </b>
+            </td>
+        </tr>
+
+        <tr>
+            
+            <td colspan="11" align="right">
+                Discount Amount&nbsp;(INR)-&nbsp;<b>
+                                                     @{
+
+                                                         decimal DiscountAmount = 0;
+
+                                                         foreach (var item in Model.myOrderDetailList)
+                                                         {
+
+                                                             DiscountAmount = item.DisCountAmount   ;
+
+                                                         }
+                                                         
+   
+                                                     }
+                @DiscountAmount
+                </b>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            @{
+                decimal Subtotalitemsprice = 0;
+                decimal total = 0;
+
+                foreach (var item in Model.myOrderDetailList)
+                {
+                    Subtotalitemsprice = Subtotalitemsprice + Convert.ToDecimal(item.UnitPrice) * Convert.ToDecimal(item.Quantity);  
+                     
+                   //total = total + Convert.ToDecimal(item.GrandTotalAmount);
+                    
+                        
+                }
+                Subtotalitemsprice = totalshiping + Subtotalitemsprice-DiscountAmount;
+            }
+
+
+            <td colspan="11" align="right">
+                GRAND TOTAL&nbsp;(INR)-&nbsp;<b>
+                    @Subtotalitemsprice
+                </b>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p>
+@*<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left">
+    <b>
+        www.mgacharger.com Declaration Letter To Whomsoever It
+        May Concern
+    </b>
+</p>*@
+<p class="MsoNormal" align="center" style="margin-bottom:0in; margin-bottom:.0001pt;text-align:center"><b>&nbsp;</b></p>
+@*<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt">I,@Model.myOrderDetailList[0].BName,have placed the order for</p>*@
+
+</div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-6">
+        @*@using (Html.BeginForm("Export", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", Id = "form1" }))
+            {*@
+        <input type="hidden" name="contentHtml" />
+        <input type="Submit" id="btnExport" value="Export" />
+        @*}*@
+    </div>
+</div>
+</div>
+
+@*<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>*@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnExport").click(function () {
+
+            $("input[name='contentHtml']").val($("#content").html());
+
+
+            var divContents = $("#content").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>Invoice</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+
+
+
+
+
+            @*$.ajax({
+                type: 'POST',
+                url: '@Url.Action("Export","Admin")',
+                data: { contentHtml: $("#content").html() },
+                cache: false,
+                success: function (data) {
+                    console.log(data);
+
+                    alert("Wah");
+                },
+                error: function () {
+                    alert("Connection Failed. Please Try Again");
+                }
+
+            });*@
+        });
+    });
+
+</script>

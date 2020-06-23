@@ -1,0 +1,97 @@
+﻿@model MGAChargerEcommerce.Models.ContactUs
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">ContactUS</div>
+            <div class="panel-body">
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success" id="message" role="alert">@TempData["Success"].ToString()</div>
+                }
+                else if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">@TempData["Error"].ToString()</div>
+                }
+                @using (Html.BeginForm("ContactUs", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", Id = "form1" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+
+                    <div class="editor-label">
+                        @Html.HiddenFor(model => model.ID)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerCareNumber)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.CustomerCareNumber, new { style = "width:510px;height:30px;", placeholder = Html.DisplayNameFor(n => n.CustomerCareNumber) })
+                        @Html.ValidationMessageFor(model => model.CustomerCareNumber)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SalesSupportNumber)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.SalesSupportNumber, new { style = "width:510;height:30px;", placeholder = Html.DisplayNameFor(n => n.SalesSupportNumber) })
+                        @Html.ValidationMessageFor(model => model.SalesSupportNumber)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerCareEmailAddress)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.CustomerCareEmailAddress, new { style = "width:510;height:30px;", placeholder = Html.DisplayNameFor(n => n.CustomerCareEmailAddress) })
+                        @Html.ValidationMessageFor(model => model.CustomerCareEmailAddress)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Address)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.Address, new { style = "width:450;height:60px;"})
+                        @Html.ValidationMessageFor(model => model.Address)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+                     <div class="editor-label">
+                        @Html.LabelFor(model => model.AboutUs)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.AboutUs, new { style = "width:450;height:60px;" })
+                        @Html.ValidationMessageFor(model => model.AboutUs)
+                        <span id="imgextensionError" style="color: #e80c4d"></span>
+
+                    </div>
+
+                    <p>
+                        <input type="submit" value="Submit" class="btn btn-sm btn-primary btn-margin" />
+                    </p>
+
+
+                }
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+<script src="~/Scripts/ckeditor/adapters/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        $("#Address").ckeditor();
+        $("#AboutUs").ckeditor();
+    });
+</script>

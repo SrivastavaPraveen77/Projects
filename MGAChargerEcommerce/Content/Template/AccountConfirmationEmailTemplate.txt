@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+</head>
+<body>
+    <table style='background-color: #EFEFEF; border: 0; padding: 25px; width: 85%; margin: 0 auto;'>
+        <tr>
+            <td colspan='2' style='background-color: #1d1d1d; verticle-align: bottom; color: white; font-size: 20px; border-collapse: collapse; padding: 25px; width: 100%;'>
+                <a href="#" style="font-family: 'Pacifico', cursive; color: #1fbaef; text-decoration: none; letter-spacing: 2px;"><span style="color: #fff;">Vidyarthi </span>Kendra</a>
+            </td>
+        </tr>
+        <tr>
+            <td style='background-color: white; color: black; padding: 20px;'>
+                <span style='color: #863b53;'>Hello {0},<br />
+                    Your  Account is almost ready. Please click the link below to confirm your email address.</span><br />
+                <br />
+                <a style='padding: 6px 12px; text-decoration: none; border-radius: 4px; background-color: #337ab7; border-color: #2e6da4; color: #fff;' href='@info/Account/ConfirmRegistration/{1}'>Click here</a>
+            </td>
+        </tr>
+        <tr>
+            <td style='background-color: white; color: black; padding: 8px;'></td>
+        </tr>
+        <tr>
+            <td style='padding: 8px;'></td>
+        </tr>
+        <tr>
+            <td style='background-color: #1fbaef; color: white; padding: 10px; font-size: 13px;'>Thank you for using <span style="font-family: 'Pacifico'">Vidyarthi Kendra</span><br />
+                Notes: Vidyarthi Kendra will never ask you for your password information via email.
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2' style='padding: 10px;'></td>
+        </tr>
+    </table>
+</body>
+</html>

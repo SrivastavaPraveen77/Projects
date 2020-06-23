@@ -1,0 +1,132 @@
+﻿@model MGAChargerEcommerce.Models.MyOrderDetailModel
+@{
+    ViewBag.Title = "viewOrderDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">
+               Order Number # @Model.myOrderDetailList[0].OrderNumber
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="panel panel-default" style="margin-top: 10px;">
+                <div class="panel-heading">
+                    Billing Address
+                </div>
+                @*@Model.myOrderDetailList[0].FirstName @Model.myOrderDetailList[0].LastName<br>
+                @Model.myOrderDetailList[0].UserEmail<br>
+                @Model.myOrderDetailList[0].AddressLine1 @Model.myOrderDetailList[0].AddressLine2<br>
+                @Model.myOrderDetailList[0].ShippingCity<br>
+                @Model.myOrderDetailList[0].PinCode<br>
+                @Model.myOrderDetailList[0].ShippingState<br>
+                @Model.myOrderDetailList[0].ShippingCountry<br>*@
+                @Model.myOrderDetailList[0].BName<br>
+                @Model.myOrderDetailList[0].BAddress<br>
+                @Model.myOrderDetailList[0].BCity<br>
+                @Model.myOrderDetailList[0].BCountry<br>
+                @Model.myOrderDetailList[0].PinCode<br>
+                
+
+            </div>
+            </div>
+        <div class="col-md-6">
+            <div class="panel panel-default" style="margin-top: 10px;">
+                <div class="panel-heading">
+                    Delivery Address
+                </div>
+                @*@Model.myOrderDetailList[0].FirstName @Model.myOrderDetailList[0].LastName<br>
+                @Model.myOrderDetailList[0].UserEmail<br>
+                @Model.myOrderDetailList[0].AddressLine1 @Model.myOrderDetailList[0].AddressLine2<br>
+                @Model.myOrderDetailList[0].ShippingCity<br>
+                @Model.myOrderDetailList[0].PinCode<br>
+                @Model.myOrderDetailList[0].ShippingState<br>
+                @Model.myOrderDetailList[0].ShippingCountry<br>*@
+                @Model.myOrderDetailList[0].BName<br>
+                @Model.myOrderDetailList[0].BAddress<br>
+                @Model.myOrderDetailList[0].BCity<br>
+                @Model.myOrderDetailList[0].BCountry<br>
+                @Model.myOrderDetailList[0].PinCode<br>
+            </div>
+        </div>
+        </div>
+
+    <div class="col-md-12">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">
+                View Order Detail
+            </div>
+            @if (Model.myOrderDetailList.Count > 0 && Model.myOrderDetailList != null)
+            {
+                int SrNo = 0;
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Product Name.</th>
+                                <th>Unit Price Excl TAX.</th>
+
+                                @*<th>SGST(%)</th>
+                                <th>SGST AMT(INR))</th>
+                                <th>CGST(%)</th>
+                                <th>CGST AMT(INR))</th>
+                                <th>IGST(%)</th>
+                                <th>IGST AMT(INR))</th>*@
+                                <th>SHIPPING CHARGES(INR)</th>
+                                <th>QUANTITY</th>
+                                <th>SUBTOTAL(INR)</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.myOrderDetailList)
+                            {
+                                SrNo++;
+                                <tr id="row_@item.OrderId">
+                                    <td>@item.ProductName</td>
+                                    <td>@item.UnitPrice</td>
+                                    <td>@item.ShippingCharges</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.GrandTotalAmount</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-6">
+            
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default" style="margin-top: 2px;margin-left:126px;">
+                <div class="panel-heading">
+    @{
+        decimal total = 0;
+ 
+    foreach (var item in Model.myOrderDetailList)
+    {
+        total = total + Convert.ToDecimal(item.GrandTotalAmount);
+    }
+ 
+    }
+                    TOTAL ORDERED AMOUNT : @total
+                 
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
